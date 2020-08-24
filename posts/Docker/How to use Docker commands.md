@@ -62,7 +62,7 @@ This post is a summary of [Docker Website], [Docker Curriculum] etc. I hope you 
 
 1. Confirm installation with Nginx
 2. Set up your development environment with Docker
-3. How to move your local files and folders to docker contaienrs
+3. How to move your local files and folders to docker containers
 4. How to use the web framework with docker containers
 5. How to modify the network ports of docker images
 6. Docker Images and Containers
