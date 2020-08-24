@@ -1,6 +1,6 @@
 <!--
     Post{
-        subtitle: "Learn how to use Docker and upload its images to DockerHub"
+        subtitle: "Learn how to use Docker and upload its images to Docker Hub"
         image: "posts/web/docker.png",
         image_decription: "Image from the official website",
         tags: "How use Docker code",
@@ -15,13 +15,15 @@
 [How to deploy a container with Docker]: https://thenewstack.io/how-to-deploy-a-container-with-docker/
 [Docker Curriculum]: https://docker-curriculum.com/
 [Docker Hub]: https://hub.docker.com/
-[Docker lifecycle]: (https://medium.com/@nagarwal/lifecycle-of-docker-container-d2da9f85959).
+[Docker lifecycle]: (https://medium.com/@BeNitinAgarwal/lifecycle-of-docker-container-d2da9f85959).
 [AWS]: https://aws.amazon.com
 [Elastic Beanstalk]: https://aws.amazon.com/pt/elasticbeanstalk/
 [ECS]: https://aws.amazon.com/ecs/
 [Cloud​Formation]: https://aws.amazon.com/pt/cloudformation/
 [Yarn]: https://yarnpkg.com/lang/en/
 [Express]: https://expressjs.com/
+
+[comment]: # (Atualizei o link Docker lifecycle, como sugerido no relatório)
 
 <!-- / -->
 
@@ -38,7 +40,7 @@
 
 <!--  -->
 
-In this post, we will learn how to use Docker commands. We will make a web app inside a Docker container and turn it into an Docker image and learn how to upload it to [Docker Hub].
+In this post, we'll learn how to use Docker commands. We will make a web app inside a Docker container and turn it into a Docker image. We'll also learn how to upload it to [Docker Hub].
 
 <br />
 
@@ -50,9 +52,9 @@ In this post, we will learn how to use Docker commands. We will make a web app i
 
 ---
 
-You should install Docker first if you haven't yet. Simply type **$docker** in your machine and this would show you how to install it. Otherwise, search how to install it in your browser.
+First, you must install Docker, if you don't have it yet. Type **$ docker** on your machine and you will be shown how to proceed with the installation. Or just search how to install it on your browser.
 
-This post is the summary of [Docker Website], [Docker Curriculum] etc. I hope you to read them first but you don't have to spend much time for them. We will learn how to deploy a web app and microservices to [AWS] with other [Steadylearner Blog] posts.
+This post is a summary of [Docker Website], [Docker Curriculum] etc. I hope you read them first, but you don't have to spend a lot of time with them. We'll learn how to deploy a web app and microservices to [AWS] with other [Steadylearner Blog] posts.
 
 <br />
 
@@ -64,7 +66,7 @@ This post is the summary of [Docker Website], [Docker Curriculum] etc. I hope yo
 4. How to use the web framework with docker containers
 5. How to modify the network ports of docker images
 6. Docker Images and Containers
-7. How to upload your Docker images to DockerHub
+7. How to upload your Docker images to Docker Hub
 8. Conclusion
 
 ---
@@ -73,7 +75,7 @@ This post is the summary of [Docker Website], [Docker Curriculum] etc. I hope yo
 
 ## 1. Confirm installation with Nginx
 
-I hope you could install Docker. Before we learn how each Docker command work, we will use these to verify it can show you some results in your machine or not.
+I hope you can install Docker. Before we learn how each Docker command works, let's test whether or not these can show some results on your machine.
 
 Use them in your CLI.
 
@@ -83,7 +85,9 @@ $docker pull nginx
 $docker run --name nginx-webserver -p 80:80 nginx
 ```
 
-Then, visit [localhost](http://localhost) and it will show this in your browser.
+Then, access [localhost](http://localhost.com). This will be shown in your browser:
+
+[comment]: # (O link anterior http://localhost não funcionava. Mostrei no relatório que enviei por e-mail. Atualizei para http://locallhost.com/. Se o anterior for intencional, por favor me avise)
 
 ```console
 Welcome to nginx!
@@ -96,7 +100,7 @@ Commercial support is available at nginx.com.
 Thank you for using nginx.
 ```
 
-Find you just need a few commands to use Docker. You could also start a Docker container with a specific name and execute bash comamnds with these.
+Realize that you only need a few commands to use Docker. You could also start a Docker container with a specific name and execute bash comamnds with these.
 
 ```console
 $docker run --name nginx-webserver -p 80:80 -d nginx
@@ -107,15 +111,15 @@ $docker exec -it CONTAINER_ID bash
 
 ## 2. Set up your development environment with Docker
 
-In this part, we will learn how to set up a default Docker image with Ubuntu you can reuse later. If you use another OS, please use that instead and refer to this part.
+In this section, we'll learn how to set up a default Docker image with Ubuntu. It will be possible to reuse this image later. If you use another OS, please, use that instead and refer to this part.
 
-Start with **pull** commands to download the official ubuntu image from [Docker Hub]. If you are new to Docker Hub, you can compare this similar to GitHub for its repositories.
+Start with **pull** commands to download the official ubuntu image from [Docker Hub]. If Docker Hub is something new for you, you can compare it to GitHub because of its repositories.
 
 ```console
 $docker pull ubuntu
 ```
 
-Then, make a container in your machine and use sh or bash commands in it with this to download minimal softwares.
+Now, make a container in your machine. To download minimal softwares, use sh or bash commands in it with this:
 
 ```console
 $docker run -it ubuntu sh
@@ -129,17 +133,17 @@ $apt-get install curl
 $curl https://www.steadylearner.com
 ```
 
-If you are out of the container, you can start it again with this.
+If you are out of the container, restart it with this:
 
 ```console
 $docker exec -it CONTAINER_ID bash
 ```
 
-You can find the CONTINAER_ID with **docker ps -a**. This is the command you will use many times and show some useul meta datas of Docker containers.
+You can find the CONTAINER_ID with **docker ps -a**. This is the command you will use often and it will show you some useful metadata of Docker containers.
 
-We will make a simple Node "Hello, World" web app example for this post. So we will need to set up the Node development environment first. Follow these processes if you want to use the same project for this post.
+We'll make a simple Node "Hello, World" web app example in this post. Let's start by configuring the Node development environment. Follow these steps if you want to use the same project as this post.
 
-You can use [$docker run -d steadylearner/ubuntu_node](https://cloud.docker.com/u/steadylearner/repository/docker/steadylearner/ubuntu_node) instead also.
+Also, you can use [$docker run -d steadylearner/ubuntu_node](https://cloud.docker.com/u/steadylearner/repository/docker/steadylearner/ubuntu_node) instead.  
 
 You should be inside your docker container to use them.
 
@@ -150,7 +154,7 @@ You should be inside your docker container to use them.
 curl -sL https://deb.nodesource.com/setup_12.x | bash
 ```
 
-will show this.
+This will be displayed:
 
 ```console
 ## Run `sudo apt-get install -y nodejs` to install Node.js 12.x and npm
@@ -174,7 +178,7 @@ apt-get update && apt-get install yarn
 
 Follow those commmands and install them all.
 
-Test node work with this.
+Test Node work with this:
 
 ```console
 $node
@@ -186,26 +190,26 @@ $console.log("Hello from www.steadylearner.com");
 <details>
   <summary class="red-white font-normal hover cursor-pointer transition-half">Vim</summary>
 
-Use this command with --assume-yes or -y to skip install relevant questions.
+Use this command with --assume-yes or -y to skip relevant install questions.
 
 ```console
 apt install --assume-yes vim
 ```
 
-It will install Vim text editor. Then use this command to use it.
+Vim text editor will be installed. Now, use this command to use it:
 
 ```console
 $vim hello.js
 ```
 
-Then, edit your hello.js file with this and **:wq** to save and quit from the Vim.
+Edit your hello.js file with this and **:wq** to save and quit from the Vim.
 
 ```js
 // hello.js
 console.log("Hello from www.steadylearner.com");
 ```
 
-Use this command to verify that Node is installed well.
+Use this command to verify that Node is installed correctly:
 
 ```console
 $node hello.js
@@ -221,31 +225,31 @@ $node hello.js
 $apt-get --assume-yes git-core
 ```
 
-It will install git and verify it installed and its version with this.
+This will install Git and verify that it is installed and its version:
 
 ```console
 $git --version
 ```
 
-Then, get your GitHub user name and email from your local machine.
+Then, get your GitHub username and email from your local machine:
 
 ```console
 $git config --get user.name
 $git config --get user.email
 ```
 
-Use them in the docker container to use Git inside of it.
+Use them in the Docker container to operate Git inside:
 
 ```console
 $git config --global user.name yourname
 $git config --global user.name youremail
 ```
 
-Use the same command(--get) before to verify them in your Docker container.
+Make use of the same command (--get) before checking them in your Docker container.
 
-Test git clone work to download files from your previous GitHub repositories.
+Test Git clone work to download files from your previous GitHub repositories. For example, clone [steadylearner/docker-examples](http://github.com/steadylearner/docker-examples) repository with this:
 
-For example, clone steadylearner/docker-examples repository with this.
+[comment]: # (Apenas adicionei um link para o repositório)
 
 ```console
 $git clone https://github.com/steadylearner/docker-examples.git
@@ -253,9 +257,9 @@ $git clone https://github.com/steadylearner/docker-examples.git
 
 </details>
 
-I hope you could install what you think necessary in your Docker container.
+I hope you can install everything you think is necessary in your Docker container.
 
-You can skip this yarn relevant part and use default npm commands instead. Otherwise, read [this post](https://linuxize.com/post/how-to-install-yarn-on-ubuntu-18-04/) for more information.
+You can skip this Yarn relevant part and use default npm commands instead. Otherwise, read [this post](https://linuxize.com/post/how-to-install-yarn-on-ubuntu-18-04/) for more information.
 
 Verify the [Yarn] version first in it.
 
@@ -265,7 +269,7 @@ $yarn -v
 
 It will show the version of your Yarn.
 
-Then, use these commands to use Node project.
+Next, use these commands to use Node project:
 
 ```console
 $cd /home
@@ -274,7 +278,7 @@ $yarn init
 $yarn add chalk
 ```
 
-Test NPM or Yarn work with NPM modules with these.
+Test NPM or Yarn work with NPM modules with these:
 
 ```js
 // Start with $node in your console and use each command.
@@ -285,9 +289,11 @@ const hello = blue("Hello from www.steadylearner.com");
 console.log(hello);
 ```
 
-It should have shown colored **Hello from www.steadylearner.com** message in your console.
+It should have shown  **Hello from www.steadylearner.com** message in your console.
 
 We verified that NPM packages work in your docker container with this.
+
+[comment]: # (Há algo faltando aqui?)
 
 If you want, make alias for this directory also similar to this.
 
@@ -301,9 +307,9 @@ Type this and :wq to save and quit.
 alias work="cd /home/node"
 ```
 
-**$source ~/.bashrc** and you can use your node project with **$work** whenever you want. You can also define WORKDIR later with **Dockerfile** or **docker-compsose.yml** instead for the same purpose.
+Use **$source ~/.bashrc** and you can use your node project with **$work** whenever you want. Also, you can define WORKDIR later with **Dockerfile** or **docker-compsose.yml** for the same purpose.
 
-There will be many Docker containers in your machine. You can remove unnecessary ones with these commands.
+There will be many Docker containers in your machine. Use these commands to remove unnecessary ones:
 
 **1.** List and remove previous Docker containers.
 
@@ -311,9 +317,9 @@ There will be many Docker containers in your machine. You can remove unnecessary
 $docker ps -a
 ```
 
-It will show the list of the instances you executed before. 
+The list of instances that you ran before will be shown.
 
-**2.** Remove what you won't need.
+**2.** Remove what you don't need.
 
 ```console
 $docker stop containerid
@@ -328,9 +334,9 @@ $docker rm containerid -f
 
 <br />
 
-## 3. How to move your local files and folders to docker contaienrs
+## 3. How to move your local files and folders to docker containers
 
-We can use git commands to donwload files from the GitHub to your containers. You can also use Docker commands to move local files and folders to your Docker conatiners and vice versa.
+We can use Git commands to download files from the GitHub into your containers. Moreover, you can use Docker commands to move local files and folders to your Docker containers and vice versa.
 
 Refer to these examples or **docker cp --help**.
 
@@ -352,18 +358,18 @@ $docker cp containerid:/from_localhost from_localhost
 
 ## 4. How to use web frameworks with docker containers
 
-We installed Node relevant softwares for this part. If you use web frameworks from other languages, please refer to the workflow of this part only.
+We installed Node relevant softwares for this part. If you use web frameworks from other languages, please, refer only to the workflow of this section.
 
 <details>
   <summary class="red-white font-normal hover cursor-pointer transition-half">Express</summary>
 
-Install the dependencies we will use inside the docker container with this.
+Install the dependencies we'll use inside the docker container with this:
 
 ```console
 $yarn add express chalk
 ```
 
-Then, we will build "Hello, World!" app with the JavaScript code below.
+Next, we'll build "Hello, World!" app with the JavaScript code below.
 
 ```js
 // server.js
@@ -381,17 +387,17 @@ const target = blue(`http://localhost:${port}`)
 app.listen(port, () => console.log(`Express Server ready at ${target}`))
 ```
 
-Then, **$node server.js** will show this message.
+Then, **$node server.js** will display this message:
 
 ```console
-Express Server ready at http://localhost:3000
+[Express] Server ready at http://localhost:3000
 ```
 
 But **$curl http://localhost:3000** or visiting it in your browser won't work yet.
 
-Each container has its own ip to network. We should inspect the docker container with **$docker inspect CONTAINER_ID > inspect.txt** to extract the information of the container.
+Each container has its own IP to network. We should inspect the docker container with **$docker inspect CONTAINER_ID > inspect.txt** to extract the information from it.
 
-You can find its local ip at the end of inspect.txt and will be similar to **172.17.0.2**. You can also make getIP.js and **$node getIP.js** to save your time.
+You can find its local IP at the end of inspect.txt and it will be similar to **172.17.0.2**. Save your time doing getIP.js and **$node getIP.js**.
 
 ```js
 const fs = require('fs')
@@ -412,11 +418,11 @@ fs.readFile(filename, 'utf8', function(err, data) {
 });
 ```
 
-You can also use the [docker inspect command](https://docs.docker.com/engine/reference/commandline/inspect/).
+You can use the [docker inspect command](https://docs.docker.com/engine/reference/commandline/inspect/) as well.
 
-Test the ip with $curl http://172.17.0.2:3000/ or verify it with your browser.
+Test the IP with $curl http://172.17.0.2:3000/ or verify it with your browser.
 
-If you could see this message, you can see that you can develop web apps in your local machine with Docker.
+If you can see this message, realize that you can actually develop web apps on your local machine with Docker.
 
 ```console
 Hello, World!
@@ -428,7 +434,7 @@ Hello, World!
 
 ## 5. How to modify the network ports of docker images
 
-In the previous part, we had to find the network port for the web framework to visit it. Instead, [you can start with your custom port](https://www.google.com/search?&q=how+to+assign+port+for+docker+container).
+In the previous part, we had to find the network port for the web framework to visit it. Alternatively, [you can start with your custom port](https://www.google.com/search?&q=how+to+assign+port+for+docker+container).
 
 ```console
 $docker run -it --name ubuntu_node -p 80:80 ubuntu
@@ -440,31 +446,31 @@ You can also use it with **-d** to [make the container run in background.](https
 docker run -d --name ubuntu_node -p 80:80 ubuntu:latest
 ```
 
-Refer to this to find what happens here better.
+Refer to this to find out what happens here better.
 
-'By default, the port on the host(container) is mapped to 0.0.0.0, which means all IP addresses. You can specify a particular IP when you define the port mapping, for example, -p 127.0.0.1:80:80'
+'By default, the port on the host (container) is mapped to 0.0.0.0, which means all IP addresses. You can specify a particular IP when defining the port mapping, for example, -p 127.0.0.1:80:80'
 
 <br />
 
 ## 6. Docker Images and Containers
 
-You may be confused with the difference between Docker container and image. You can simply think the images are classes and containers are the instances you are using in your machine.
+You may find yourself confused by the difference between Docker container and image. Just think of the images as classes and containers as instances that you are using on your machine. You can:
 
-1. You can pull or run(pull and start) images and it will make docker containers from it in your local machine.
+1. Pull or run (pull and start) images and it will make docker containers from them on your local machine.
 
-2. You can edit files in your containers with **$docker exec -it containername bash**.
+2. Edit files in your containers with **$docker exec -it containername bash**.
 
-3. You can make images from the containers with **$docker commit containername YourDockerHub/image && docker push account/image**.
+3. Make images from the containers with **$docker commit containername YourDockerHub/image && docker push account/image**.
 
-You can also start with Dockerfile instead of **1.** and **2.** and commit your docker images also. We will learn that in another [Steadylearner Blog] with [Elastic Beanstalk].
+Feel free to start with Dockerfile instead of **1.** and **2.** and commit your docker images as well. We'll learn that in another [Steadylearner Blog] with [Elastic Beanstalk].
 
 <br />
 
-## 7. How to upload your Docker images to DockerHub
+## 7. How to upload your Docker images to Docker Hub
 
-We will learn how to [create a repository first at Dockerhub](https://cloud.docker.com/repository/create) with the example we made.
+Now, we are going to learn how to [create a repository first at Docker Hub](https://cloud.docker.com/repository/create) with the example we made.
 
-Login first with this command.
+First, login with this command:
 
 ```console
 $docker login
@@ -476,46 +482,46 @@ Then, use [$docker commit](https://www.scalyr.com/blog/create-docker-image).
 $docker commit ubuntu_node
 ```
 
-Then, verify the image was made from the ubuntu_node container with this.
+Next, verify the image made from the ubuntu_node container using this:
 
 ```console
 $docker images
 ```
 
-Give it tag(name).
+Give it a tag (name).
 
 ```console
 $docker tag imageid steadylearner/ubuntu_node
 ```
 
-You could execute this command instead of them.
+You can execute this command instead:
 
 ```console
 $docker commit ubuntu_node steadylearner/ubuntu_node
 ```
 
-Then, you can push your docker image to Docker Hub with this.
+Now, you can push your docker image to Docker Hub with this:
 
 ```console
 $docker push steadylearner/ubuntu_node // yourusername/image
 ```
 
-Wait for uploading process to complete and use this.
+Wait for uploading process to complete and use this:
 
 ```console
 $docker run -it steadylearner/ubuntu_node bash
 ```
 
-Then, follow the same process you used before to edit it if you want.
+If you want to edit it, just follow the same steps we used before.
 
-You can restart the containers with this if it stopped.
+Restart the containers with this, if they stop:
 
 ```console
 $docker restart containerid
 $docker exec -it containerid bash
 ```
 
-You can remove container made from steadylearner/ubuntu_node image or yours with this.
+To remove container made from steadylearner/ubuntu_node image or yours, you can use this:
 
 ```console
 $docker stop ubuntu_node
@@ -523,7 +529,7 @@ $docker container rm ubuntu_node
 $docker image rm ubuntu
 ```
 
-You can also rename the container.
+If you want to rename the container, use this:
 
 ```console
 $docker container rename randomname ubuntu_node
@@ -531,7 +537,7 @@ $docker container rename randomname ubuntu_node
 
 Use yours instead of ubuntu_node or steadylearner/ubuntu_node.
 
-If you modify the project, use the commands similar to this.
+If you modify the project, use the commands similar to this:
 
 ```console
 $docker commit ubuntu_node steadylearner/ubuntu_node
@@ -543,19 +549,19 @@ Or with a commit message.
 $docker commit --message "Test message and will be similar to github -m option" ubuntu_node steadylearner/ubuntu_node
 ```
 
-Then, use this to push the image made from it to DockerHub.
+Now, let's push the image made from it to Docker Hub:
 
 ```console
 $docker push steadylearner/ubuntu_node
 ```
 
-and use this 
+and use this:
 
 ```console
 $docker run -it steadylearner/ubuntu_node bash
 ```
 
-or this to verify the result.
+or this, to verify the result:
 
 ```console
 $docker history steadylearner/ubuntu_node
@@ -565,19 +571,21 @@ $docker history steadylearner/ubuntu_node
 
 ## 8. Conclusion
 
-I hope you made it all work. We could install Docker and made it work with Nginx. Then, we made s Docker container and image and uploaded them to [DockerHub].
+I hope you made it all work.  We learned how to install Docker and make it work with Nginx, how to make a Docker container and image and upload them into [Docker Hub].
 
-In the later [Steadylearner Blog], we will learn how to deploy the web app with [Elastic Beanstalk] from [AWS] and Dockerfile. We will also learn how to deploy micro services with [ECS], [Cloud​Formation], **docker-compose.yml** etc.
+There are many things to learn. But everything will be easier with examples. In the later posts on the [Steadylearner Blog], we will learn how to deploy the web app with [Elastic Beanstalk] from [AWS] and Dockerfile. We will also learn how to deploy micro services with [ECS], [Cloud​Formation], **docker-compose.yml** etc. So, keep an eye out for updates!
 
-There are many things to learn. But, everything will be easy with examples.
-
-If you want the latest contents from Steadylearner, follow me at [Twitter].
+Stay on top of the latest Steadylearner content: follow me on [Twitter].
 
 Do you need **a Full Stack Rust Developer** who can deploy the projects with Docker, AWS etc? Contact me with [LinkedIn] and I will help you.
 
-**Thanks and please share this post with others**.
+**Thank you! Share this post with others and help us to grow and improve.**
 
-If you want more you can refer to these commands. You can use the id or name of containers for them.
+Reviewed by [Mariana Santos](https://www.linkedin.com/in/mariana-santos-89234a189/?locale=en_US)
+
+[comment]: # (Tudo bem me identificar aqui certo? :)
+
+Refer to these commands if you want more. Use the ID or the name of the containers for them.
 
 ### Logs of the container
 
