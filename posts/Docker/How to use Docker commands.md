@@ -52,7 +52,7 @@ In this post, we'll learn how to use Docker commands. We will make a web app ins
 
 ---
 
-First, you must install Docker, if you don't have it yet. Type **$ docker** on your machine and you will be shown how to proceed with the installation. Or just search how to install it on your browser.
+First, you must install Docker, if you don't have it yet. Type **$docker** on your machine and you will be shown how to proceed with the installation. Or just search how to install it on your browser.
 
 This post is a summary of [Docker Website], [Docker Curriculum] etc. I hope you read them first, but you don't have to spend a lot of time with them. We'll learn how to deploy a web app and microservices to [AWS] with other [Steadylearner Blog] posts.
 
