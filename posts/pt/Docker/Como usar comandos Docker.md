@@ -53,7 +53,7 @@ Traduzido e revisado por [Mariana Santos](https://www.linkedin.com/in/mariana-sa
 ---
 Primeiro, você deve instalar o Docker, se você não o tem ainda. Digite **$docker** no seu computador e será mostrado como proceder com a instalação. Ou apenas faça uma busca no seu navegador sobre como instalar.
 
-Este post é um resumo do [Docker Website], [Docker Curriculum] etc. Eu espero que você os leia primeiro, mas você não precisa dedicar tanto tempo a eles. Nós vamos aprender como implantar um web app e microserviços com o [AWS] em outros post do [Blog Steadylearner].
+Este post é um resumo do [Docker Website], [Docker Curriculum] etc. Eu espero que você os leia primeiro, mas você não precisa dedicar tanto tempo a eles. Nós vamos aprender como implantar um web app e microsserviços com o [AWS] em outros post do [Blog Steadylearner].
 
 <br />
 
