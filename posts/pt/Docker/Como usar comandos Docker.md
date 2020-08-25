@@ -49,9 +49,9 @@ Neste post, iremos aprender como usar comandos do Docker. Nós faremos um web ap
 3. [Como implantar um container usando o Docker], [Ciclo de vida do Docker]
 
 ---
-Primeiro, você deve instalar o Docker, se você não o tem ainda. Digite **$ docker** no seu computador e será mostrado como proceder com a instalação. Ou apenas faça uma busca no seu navegador sobre como instalar.
+Primeiro, você deve instalar o Docker, se você não o tem ainda. Digite **$docker** no seu computador e será mostrado como proceder com a instalação. Ou apenas faça uma busca no seu navegador sobre como instalar.
 
-Este post é um resumo do [Docker Website], [Docker Curriculum] etc. Eu espero que você os leia primeiro, mas você não precisa dedicar tanto tempo a eles. Nós vamos aprender como implantar um web app e microservicços com o [AWS] em outros post do [Blog Steadylearner].
+Este post é um resumo do [Docker Website], [Docker Curriculum] etc. Eu espero que você os leia primeiro, mas você não precisa dedicar tanto tempo a eles. Nós vamos aprender como implantar um web app e microserviços com o [AWS] em outros post do [Blog Steadylearner].
 
 <br />
 
@@ -63,7 +63,7 @@ Este post é um resumo do [Docker Website], [Docker Curriculum] etc. Eu espero q
 4. Como usar frameworks web com containers Docker
 5. Como modificar portas de rede de imagens de Docker
 6. Imagens e Conteiners de Docker
-7. Como fazer o upload de suas imagens Docker no Docker Hub
+7. Como subir suas imagens Docker no Docker Hub
 8. Conclusão
 
 ---
@@ -84,8 +84,6 @@ $docker run --name nginx-webserver -p 80:80 nginx
 
 Então, acesse [localhost](http://localhost.com). Isto será exibido no seu navegador:
 
-[comment]: # (O link anterior http://localhost não funcionava. Mostrei no relatório que enviei por e-mail. Atualizei para http://locallhost.com/. Se o anterior for intencional, por favor me avise)
-
 ```console
 Welcome to nginx!
 
@@ -96,6 +94,8 @@ Commercial support is available at nginx.com.
 
 Thank you for using nginx.
 ```
+
+Em português
 
 ```console
 Bem vindo ao nginx!
@@ -470,7 +470,7 @@ Você pode ficar um pouco confuso acerca da diferença entre container e imagem 
 
 3. Fazer imagens dos containers com **$docker commit containername YourDockerHub/image && docker push account/image**.
 
-Sinta-se livre para iniciar com um Dockerfile em vez dos passos **1.** e **2.** e enviar suas imagens Docker também. Nós aprenderemos mais sobre isso em outro post do [Blog Steadylearner] usando [Elastic Beanstalk].
+Sinta-se livre para iniciar com um Dockerfile em vez dos passos **1.** e **2.** e enviar suas imagens Docker também. Nós aprenderemos mais sobre isso noutra postagem do [Blog Steadylearner] usando [Elastic Beanstalk].
 
 <br />
 
