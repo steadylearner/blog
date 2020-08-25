@@ -9,24 +9,27 @@
 
 <!-- Link -->
 
+[comment]: # (Os seguintes links não estão funcionando (Erro "página não encontrada) [JSON Webservice], [Rust Blog Example], [Tonic CRUD Example by Steadylearner], [Official Tonic Guide] and [React Rust] e também existem muitos links que não foram utilizados no texto.)
+
 [Steadylearner]: https://www.steadylearner.com
+[Blog Steadylearner]: (https://www.steadylearner.com/blog)
 [Rust Website]: https://www.rust-lang.org/
 
 [Rust Rocket]: https://rocket.rs/
-[Rocket Getting Started]: https://rocket.rs/v0.4/guide/getting-started
-[Rocket JSON Example]: https://github.com/SergioBenitez/Rocket/tree/master/examples/json
-[Redirect]: https://api.rocket.rs/v0.4/rocket/response/struct.Redirect.html
+[Começando Rocket]: https://rocket.rs/v0.4/guide/getting-started
+[Exemplo de Rocket JSON ]: https://github.com/SergioBenitez/Rocket/tree/master/examples/json
+[Redirecionar]: https://api.rocket.rs/v0.4/rocket/response/struct.Redirect.html
 [Tera]: https://tera.netlify.com/
-[Rocket Tera example]: https://github.com/SergioBenitez/Rocket/tree/master/examples/tera_templates
+[Exemplo de Rocket Tera ]: https://github.com/SergioBenitez/Rocket/tree/master/examples/tera_templates
 
 [CORS]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS
 [OPTIONS]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS
 [Rocket CORS]: https://github.com/lawliet89/rocket_cors
-[Rocket CORS examples]: https://github.com/lawliet89/rocket_cors/tree/master/examples
-[Rocket CORS fairing example]: https://github.com/lawliet89/rocket_cors/blob/master/examples/fairing.rs
-[Rocket CORS fairng test example]: https://github.com/lawliet89/rocket_cors/blob/master/tests/fairing.rs
+[Exemplos de Rocket CORS ]: https://github.com/lawliet89/rocket_cors/tree/master/examples
+[Exemplos de Rocket CORS fairing]: https://github.com/lawliet89/rocket_cors/blob/master/examples/fairing.rs
+[Exemplo teste de Rocket CORS fairng]: https://github.com/lawliet89/rocket_cors/blob/master/tests/fairing.rs
 
-[Rust Yew Examples]: https://github.com/yewstack/yew/tree/master/examples
+[Exemplos de Rust Yew]: https://github.com/yewstack/yew/tree/master/examples
 
 [hyper]: https://github.com/hyperium/hyper
 
@@ -36,25 +39,25 @@
 [stdweb]: https://github.com/koute/stdweb
 
 [YouTube API]: https://developers.google.com/youtube/v3/getting-started#before-you-start
-[How to use YouTube API for developers]: https://www.google.com/search?q=how+to+use+youtube+api+for+developers
+[Como usar YouTube API para desenvolvedores]: https://www.google.com/search?q=how+to+use+youtube+api+for+developers
 
 [Rust Full Stack]: https://github.com/steadylearner/Rust-Full-Stack
 [JSON Webservice]: https://github.com/steadylearner/Rust-Full-Stack/tree/master/before/JSON_Webservice
 
-[Rust Blog Example]: https://github.com/steadylearner/Rust-Full-Stack/tree/master/web/before/rust_blog
+[Exemplo de Blog Rust]: https://github.com/steadylearner/Rust-Full-Stack/tree/master/web/before/rust_blog
 
 [CRA]: https://github.com/facebook/create-react-app
 
-[protocol buffers]: https://developers.google.com/protocol-buffers/docs/overview
+[Buffers de Protocolo]: https://developers.google.com/protocol-buffers/docs/overview
 [Tonic]: https://github.com/hyperium/tonic
 [Rust Postgresql]: https://github.com/sfackler/rust-postgres
 [Rust Postgresql query]: https://docs.rs/postgres/0.15.2/postgres/struct.Connection.html#method.query
-[Rust Postgresql execute]: https://docs.rs/postgres/0.15.2/postgres/struct.Connection.html#method.execute
-[Tonic CRUD Example by Steadylearner]: https://github.com/steadylearner/Rust-Full-Stack/blob/master/grpc/user/proto/user/user.proto
-[Official Tonic Guide]: https://github.com/hyperium/tonic/blob/master/tonic-examples/helloworld-tutorial.md
+[Execução do Rust Postgresql]: https://docs.rs/postgres/0.15.2/postgres/struct.Connection.html#method.execute
+[Exemplo de Tonic CRUD por Steadylearner]: https://github.com/steadylearner/Rust-Full-Stack/blob/master/grpc/user/proto/user/user.proto
+[Guia oficial Tonic]: https://github.com/hyperium/tonic/blob/master/tonic-examples/helloworld-tutorial.md
 [gRPC Client]: https://github.com/uw-labs/bloomrpc
 
-[How to install Postgresql]: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04
+[Como instalar Postgresql]: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04
 
 [tonic-build]: https://github.com/hyperium/tonic/blob/master/tonic-build/README.md
 
@@ -70,35 +73,36 @@
 
 <!-- Steadylearner Post -->
 
-[Rust blog posts]: https://www.steadylearner.com/blog/search/Rust
-[How to install Rust]: https://www.steadylearner.com/blog/read/How-to-install-Rust
+[Posts sobre Rust]: https://www.steadylearner.com/blog/search/Rust
+[Como instalar Rust]: https://www.steadylearner.com/blog/read/How-to-install-Rust
 [Rust Chat App]: https://www.steadylearner.com/blog/read/How-to-start-Rust-Chat-App
-[Rust Yew Frontend]: https://github.com/yewstack/yew
+[Frontend do Rust Yew]: https://github.com/yewstack/yew
 [Yew Counter]: https://www.steadylearner.com/yew_counter
-[How to use Rust Yew]: https://www.steadylearner.com/blog/read/How-to-use-Rust-Yew
-[How to deploy Rust Web App]: https://www.steadylearner.com/blog/read/How-to-deploy-Rust-Web-App
-[How to start Rust Chat App]: https://www.steadylearner.com/blog/read/How-to-start-Rust-Chat-App
-[Fullstack Rust with Yew]: https://www.steadylearner.com/blog/read/Fullstack-Rust-with-Yew
-[How to use NPM packages with Rust Frontend]: https://www.steadylearner.com/blog/read/How-to-use-NPM-packages-with-Rust-Frontend
-[How to use markdown with code snippets in Rust Yew Frontend]: https://www.steadylearner.com/blog/read/How-to-use-markdown-with-code-snippets-in-Rust-Yew-Frontend
-[How to modulize your Rust Frontend]: https://www.steadylearner.com/blog/read/How-to-modulize-your-Rust-Frontend
-[How to write Full Stack Rust Code]: https://www.steadylearner.com/blog/read/How-to-write-Full-Stack-Rust-code
-[How to use a modal in Rust]: https://www.steadylearner.com/blog/read/How-to-use-a-modal-in-Rust
-[How to use routers in Rust Frontend]: https://www.steadylearner.com/blog/read/How-to-use-routers-in-Rust-Frontend
-[How to serve static files with Rust]: https://www.steadylearner.com/blog/read/How-to-serve-static-files-with-Rust
-[How to use a single page app wtih Rust]: https://www.steadylearner.com/blog/read/How-to-use-a-single-page-app-with-Rust
-[How to use Rust Tera for undefined paths]: https://www.steadylearner.com/blog/read/How-to-use-Rust-Tera-for-undefined-paths
-[How to make JSON Webservice with Rust and YouTube API]: https://www.steadylearner.com/blog/read/How-to-make-JSON-Webservice-with-Rust-and-YouTube-API
-[How to use CORS and OPTIONS HTTP request with Rust Rocket]: https://www.steadylearner.com/blog/read/How-to-use-CORS-and-OPTIONS-HTTP-request-with-Rust-Rocket
-[How to render a YouTube vlog with Rust Yew fetch API]: https://www.steadylearner.com/blog/read/How-to-render-a-YouTube-vlog-with-Rust-Yew-fetch-API
+[Como usar Rust Yew]: https://www.steadylearner.com/blog/read/How-to-use-Rust-Yew
+[Como implantar um Web App Rust]: https://www.steadylearner.com/blog/read/How-to-deploy-Rust-Web-App
+[Como iniciar um Chat App Rust]: https://www.steadylearner.com/blog/read/How-to-start-Rust-Chat-App
+[Fullstack Rust com Yew]: https://www.steadylearner.com/blog/read/Fullstack-Rust-with-Yew
+[Como usar pacotes NPM com Rust Frontend]: https://www.steadylearner.com/blog/read/How-to-use-NPM-packages-with-Rust-Frontend
+[Como usar markdown com partes de código no Rust Yew Frontend]: https://www.steadylearner.com/blog/read/How-to-use-markdown-with-code-snippets-in-Rust-Yew-Frontend
+[Como modulizar seu Rust Frontend]: https://www.steadylearner.com/blog/read/How-to-modulize-your-Rust-Frontend
+[Como escrever código Rust Full Stack]: https://www.steadylearner.com/blog/read/How-to-write-Full-Stack-Rust-code
+[Como usar um modal no Rust]: https://www.steadylearner.com/blog/read/How-to-use-a-modal-in-Rust
+[Como usar roteadores no Rust Frontend]: https://www.steadylearner.com/blog/read/How-to-use-routers-in-Rust-Frontend
+[Como servir arquivos estáticos com Rust]: https://www.steadylearner.com/blog/read/How-to-serve-static-files-with-Rust
+[Como usar um aplicativo de página única com Rust]: https://www.steadylearner.com/blog/read/How-to-use-a-single-page-app-with-Rust
+[Como usar Rust Tera em paths indefinidos]: https://www.steadylearner.com/blog/read/How-to-use-Rust-Tera-for-undefined-paths
+[Como fazer um Webservice JSON com Rust e YouTube API]: https://www.steadylearner.com/blog/read/How-to-make-JSON-Webservice-with-Rust-and-YouTube-API
+[Como usar solicitações CORS e OPTIONS HTTP com Rust Rocket]: https://www.steadylearner.com/blog/read/How-to-use-CORS-and-OPTIONS-HTTP-request-with-Rust-Rocket
+[Como renderizar um vlog para YouTube com Rust Yew fetch API]: https://www.steadylearner.com/blog/read/How-to-render-a-YouTube-vlog-with-Rust-Yew-fetch-API
 
-[How to use Python in JavaScript]: https://www.steadylearner.com/blog/read/How-to-use-Python-in-JavaScript
-[How to use React Spring to animate your message]: https://medium.com/@steadylearner/how-to-use-react-spring-to-animate-your-message-2bd2a7e62a5a
+[Como usar Python em JavaScript]: https://www.steadylearner.com/blog/read/How-to-use-Python-in-JavaScript
+[Como usar React Spring para fazer uma mensagem animada]: https://medium.com/@steadylearner/how-to-use-react-spring-to-animate-your-message-2bd2a7e62a5a
 
-[How to use Webpack with React]: https://www.steadylearner.com/blog/read/How-to-use-Webpack-with-React
+[Como fazer um Webpack com React]: https://www.steadylearner.com/blog/read/How-to-use-Webpack-with-React
 [Actix]: https://github.com/actix/actix-web
-[How to use Docker commands]: https://www.steadylearner.com/blog/read/How-to-use-Docker-commands
-[How to use React with Rust Actix]: https://www.steadylearner.com/blog/read/How-to-use-React-with-Rust-Actix
+[Como usar comandos Docker]: https://www.steadylearner.com/blog/read/How-to-use-Docker-commands
+[Como usar React com Rust Actix]: https://www.steadylearner.com/blog/read/How-to-use-React-with-Rust-Actix
+
 
 <!-- / -->
 
@@ -109,46 +113,48 @@
 
 <!--  -->
 
-In this post, we will learn how to use [Docker][How to use Docker commands] with Rust web frameworks.
+Neste post, nós aprederemos como usar o [Docker][Como usar comandos Docker] com web frameworks Rust.
 
-We already have React and Rust server side code ready at [React Rust]. Clone the repository or use the Docker to see the result first.
+Traduzido e revisado por [Mariana Santos](https://www.linkedin.com/in/mariana-santos-89234a189/?locale=en_US)
+
+Já temos o código do servidos React e Rust prontos em [React Rust]. Clone o repositório ou use o Docker para ver os resultados primeiro.
 
 ```console
 $docker run -d -p 80:8000 steadylearner/rust && curl localhost
-``` 
+```
 
-Then, the result will be similar to this.
+E então, o resultado será semelhante a este:
 
 [![user-signup](https://www.steadylearner.com/static/images//post/React/user-signup.png)][React Rust]
 
 <br />
 
-<h2 class="red-white">[Prerequisite]</h2>
+<h2 class="red-white">[Pré-requisitos]</h2>
 
 1. Docker
 2. Rust
 
 ---
 
-I will assume that you are already familiar with Docker and Rust. If you haven't used Docker commands yet, please read [How to use Docker commands].
+Eu presumo que você já esteja familiarizdo com o Docker e o Rust. Se você não usou comandos Docker, por favor, leia este post do [Steadylearner][Como usar comandos Docker] para mais informações.
 
 <br />
 
-<h2 class="blue">Table of Contents</h2>
+<h2 class="blue">Índice</h2>
 
-1. Target **0.0.0.0:** to use your project with Docker
-2. Prepare files to use
-3. Make a Docker image with Dockerfile
-4. Verify the result in your machine
-5. Conclusion
+1. Atinja **0.0.0.0:** para usar seus projetos com Docker
+2. Prepare seus arquivos
+3. Faça uma imagem Docker usando o Dockerfile
+4. Verifique o resultado em seu computador
+5. Conclusão
 
 ---
 
 <br />
 
-## 1. Target 0.0.0.0: to use your project with Docker
+## 1. Atinja **0.0.0.0:** para usar seus projetos com Docker
 
-This is maybe the simplest but most important part to save your time. Verify your server side code. In server/actix/src/main.rs of [React Rust], you can see the code similar to this.
+Talvez esta seja a etapa mais simples, porém também a mais importante para economizar seu tempo: verifique o código do servidor. Em server/actix/src/main.rs disponível em [React Rust], você verá um código parecido com este:
 
 ```rust
 extern crate actix_web;
@@ -194,35 +200,35 @@ pub fn main() {
 }
 ```
 
-**Never ever** use **localhost** or **127.0.0.1** etc and only use ports that start with **0.0.0.0:** if you want to containerize your project with Docker later. This is the same for other web frameworks also.
+**Nunca, jamais** use **localhost** ou **127.0.0.1** etc. **Apenas** use portas que comecem com **0.0.0.0:** se você quiser colocar o seu projeto em um container Docker depois. Isto também serve para outros frameworks da web.
 
-The port **8000** is used here to synchronize with React frontend made with Webpack. You can use 80 instead when you want to deploy it to AWS. We will learn how to do that in the later [Rust blog posts].
+A porta **8000** é usada aqui para sincronizar com o frontend do React com o Webpack. Caso você queira implantar ele no AWS, use a porta 80 no lugar. Nós aprenderemos como fazer isso em outros [Posts sobre Rust].
 
-If you want more information of the code used here, please read [How to use React with Rust Actix].
+Para mais informações sobre o código usado aqui, por favor, leia este post do Steadylearner [Como usar React com Rust Actix].
 
 <br />
 
-## 2. Prepare files to use
+## 2. Prepare seus arquivos
 
-Rust is compiled language. When you use **cargo run --release**, it makes an executable binary file at **target/release/**.
+Rust é uma linguagem compilada. Quando você usa **cargo run --release**, um arquivo binário executável é criado em **target/release/**.
 
-Its name will be equal to your project name at **Cargo.toml** and will be **react_actix**.
+Este arquivo terá o mesmo nome do seu projeto em **Cargo.toml** e será **react_actix**.
 
 ```toml
 [package]
 name = "react_actix"
 ```
 
-We don't need other files made from Rust other than that.
+Nós não precisamos de quaisquer outros arquivos feitos pelo Rust além deste.
 
-We also have some static files for React frontend code to work at **public** folder.
+Nós também temos alguns arquivos estáticos para o código do frontend do para funcionar na pasta **public**.
 
-To sum up, you just need to find how to include these to a Docker image we will make.
+Resumidamente, você só precisa descobrir como os incluir na imagem Docker image que estaremos fazendo em breve.
 
 1. **react_actix**
-2. **public** folder
+2. pasta **public**
 
-It will be no different to use these commands in your console to test it separately in your machine.
+Não há diferença entre usar estes comandos em seu console ou os estar separadamente no seu computador.
 
 ```console
 $mkdir Docker
@@ -233,19 +239,19 @@ $mv Docker && ./react_actix
 
 <br />
 
-## 3. Make a Docker image with Dockerfile
+## 3. Faça uma imagem Docker usando o Dockerfile
 
-In the previous part, we already learnt which files to include in your Docker container.
+Na seção anterior, nós aprendemos sobre quais arquivos incluir no seu container Docker.
 
-What left is to decide which base **Docker image** to use and write a few commands in Dockerfile to make all work.
+O que nos resta é decidir qual base de **imagem Docker** usar e digitar alguns comandos em um Dockerfile para fazer tudo funcionar.
 
-For it is Rust project, it is easy to think we need [the Rust official image from the Dockerhub](https://hub.docker.com/_/rust).
+Como isto é um projeto Rust, é fácil imaginar que nós iremos precisar da [imagem oficial do Rust do Dockerhub](https://hub.docker.com/_/rust).
 
-But, we don't need it for we can just execute the **react_actix** binary project with **$./react_actix** inside a Docker container.
+Mas na verdade, nós não precisamos disso. Nós podemos apenas executar o projeto binário **react_actix** com **$./react_actix** dentro de um container Docker.
 
-You can compare the results.
+Compare os resultados.
 
-1. Whatever OS you use in your machine.
+1. Qualquer que seja o sistema operacional que você use.
 
 ```json
 {
@@ -254,7 +260,7 @@ You can compare the results.
 }
 ```
 
-2. With Rust official Docker image.
+2. Com a imagem oficial do Rust:
 
 ```json
 {
@@ -263,9 +269,9 @@ You can compare the results.
 }
 ```
 
-For we already know the difference, we will finally make a **Dockerfile**. It is just the file to include commands we used manually before in [How to use Docker commands].
+Agora que já sabemos a diferença, vamos finalmente fazer um **Dockerfile**. É apenas um arquivo para incluir os comandos que usamos manualmente no post [Como usar comandos Docker] anteriormente no [Blog Steadylearner].
 
-**It will make a Docker image and not a container** and will be similar to this.
+**Isso fará uma imagem Docker, não um container** e será semelhante a isto:
 
 ```toml
 FROM ubuntu # 1.
@@ -277,31 +283,31 @@ EXPOSE 8000 # 4.
 CMD ["./react_actix"] #5.
 ```
 
-The process is just to make a virtual development environment similar to your mahcine with Docker. Then, you help it to execute few commands we read in the previous part.
+O processo consiste em fazer um ambiente de desenvolvimento virtual semelhante à seu computador usando o Docker. Então, você o ajuda a executar alguns dos comandos que nós lemos na seção anterior.
 
-**1.** Use OS or base Docker image you want.
+**1.** Use o sistema operacional ou a imagem base do Docker de sua escolha.
 
-**2.** Use whatever folder name you want for your project.
+**2.** Renomeie seu projeto como quiser.
 
-**3.** We need static files for React frontend and an executable binary file for **Rust**.
+**3.** Precisamos de arquivos estáticos para o front-end do React e um arquivo binário executável para o **Rust**.
 
-You will only need **COPY ./target/release/react_actix /app** if your project is without the frontend code.
+Você precisará apenas de **COPY ./target/release/react_actix /app** se o seu projeto não possuir frontend.
 
-**4.** Expose the port you use in your project outside of your docker container.
+**4.** Exponha a porta que você usa em seu projeto fora do container Docker.
 
-You can easily verify it with **$curl localhost** later.
+Verifique facilmente utilizando **$curl localhost** depois.
 
-**5.** We execute the Rust web app with this. Nothing complicated here.
+**5.** Nós executamos o web app Rust com isto. Não há nada complicado aqui.
 
-For **Dockerfile** is ready, make a **./docker-build.bash** file similar to this to make a Docker image with it.
+Quando o **Dockerfile** estiver pronto, faça um arquivo **./docker-build.bash**, semelhante a isto para criar uma imagem Docker.
 
 ```bash
 docker build -t youraccount/rust .
 ```
 
-Execute it with **./docker-build.bash**. It won't take a long time for Docker to build the image.
+Execute usando **./docker-build.bash**. Não demorará muito para que o Docker construa a imagem.
 
-Then, you can verify the result with **$docker images**. It will be similar to this.
+Então, verifique o resultado com **$docker images**. Será parecido com isto:
 
 ```console
 REPOSITORY              TAG
@@ -310,52 +316,54 @@ youraccount/rust          latest
 
 <br />
 
-## 4. Verify the result in your machine
+## 4. Verifique o resultado em seu computador
 
-The prepartion ends. Make the Docker conatiner from the image you made with this command.
+A preparação acaba aqui. Faça o container Docker a partir da sua imagem usando este comando:
 
 ```console
 $docker run -d -p 80:8000 steadylearner/rust
 ```
 
-You can verify the Docker container is made from the image with this **$docker ps -a**.
+Para verificar se o container Docker foi criado a partir da imagem, use **$docker ps -a**.
 
-It will show the message similar to this.
+A mensagem exibida será parecida com isto:
 
 ```console
 COMMAND        PORTS
 "./react_actix"    0.0.0.0:80->8000/tcp
 ```
 
-We exposed **8000** port in the previous part. The result of it is **8000/tcp** above.
+Expusemos a porta **8000** na seção anterior. O resultado disso é o **8000/tcp** mostrado acima.
 
-Then, we used port mapping with **-p 80:8000** to test it easily with **curl** and you can see it worked with this.
+Então, usamos o mapeamento de porta com **-p 80:8000** para testar facilmente com: **curl**. Você pode verificar se funcionou usando isto:
 
 ```console
 PORTS
 0.0.0.0:80->8000/tcp
 ```
 
-Everything is ready. Use **$curl localhost** or visit it with your browser. Refresh it also at **/**, **/user** to verify the Rust server side code working well.
+Está tudo pronto agora! Use **$curl localhost** ou acesse usando seu navegador. Atualize usando **/**. Utilize **/user** para checar se o código do servidor do Rust está funcionando bem.
 
-If you want, you can push this to DockerHub with a command similar to **$docker push youraccount/rust**.
+Para enviar para o Docker Hub, basta usar um comando semelhante a: **$docker push youraccount/rust**.
 
-It is similar to use GitHub and you should make an account and make a repository first.
+Se você quiser usar o GitHub, o processo é semelhante. Mas primeiro, se certifique de ter uma conta e um repositório.
 
 <br />
 
-## 5. Conclusion
+## 5. Conclusão
 
-I hope you made it all work. We learnt how to dockerize Rust web app.
+Espero que você tenha feito tudo funcionar bem! Nós aprendemos a dockerize um web app Rust.
 
-We used React production files to make it more meaningful. You could use whatever static files or without them also.
+Nós usamos arquivos de produção React para deixar mais significativo. You could use any static files or just dismiss them. Você pode usar qualquer arquivo estático ou simplesmente os descartar.
 
-In the later [Rust blog posts], we will learn how to deploy Rust Docker images to **AWS**. It won't be difficult for we have various examples already at [React Rust] you can compare.
+Nos próximos [Posts sobre Rust], nós aprederemos como implantar imagens Docker Rust para **AWS**. Nós temos muitos exemplos preparados em [React Rust], então não será complicado.
 
-Finding working Rust code is not easy, so I use Express and other frameworks to prototype the projects and write blog posts for them also. If you want to experiment them, please refer to [React Rust] repository.
+Encontrar um código Rust funcional não é nada fácil. Eu uso o Express e outros frameworks para fazer o protótipo dos projetos, e também os uso para escrever posts para blog. Caso deseje experimentar, verifique o repositório [React Rust].
 
-If you want the latest contents from Steadylearner, follow me at [Twitter] or star [Rust Full Stack].
+Fique por dentro do conteúdo mais recente do [Steadylearner]: me segue no [Twitter] ou acesse [Rust Full Stack].
 
-Do you need **a Full Stack Developer who can use Docker and AWS to deploy the projects**? Contact me with [LinkedIn] or [Twitter] and I will help you.
+Você precisa de um Desenvolvedor de Full Stack Rust que consegue can implantar projetos com Docker, AWS etc? Entre em contato comigo pelo LinkedIn e eu o ajudarei.
 
-You can invite me to work with your team. I can learn fast if there is a reason for that.
+Muito obrigado! Compartilhe este post com outros e nos ajude a crescer e melhorar.
+
+Você pode me convidar para trabalhar com sua equipe. Posso aprender rápido, desde que haja um motivo para isso.
