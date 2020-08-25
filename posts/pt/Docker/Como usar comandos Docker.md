@@ -40,6 +40,10 @@
 
 Neste post, iremos aprender como usar comandos do Docker. Nós faremos um web app dentro de um container Docker, e depois o transformaremos numa imagem. Também aprenderemos como fazer uploads para o [Docker Hub].
 
+Traduzido e revisado por [Mariana Santos](https://www.linkedin.com/in/mariana-santos-89234a189/?locale=en_US)
+
+[comment]: # (Tudo bem me identificar aqui certo? :)
+
 <br />
 
 <h2 class="red-white">[Pré-requisitos]</h2>
@@ -588,10 +592,6 @@ Fique por dentro dos conteúdos mais recentes do Steadylearner: me segue no [Twi
 Você precisa de **um Desenvolvedor de Full Stack Rust** que consegue can implantar projetos com Docker, AWS etc? Entre em contato comigo pelo [LinkedIn] e eu o ajudarei.
 
 **Muito obrigado! Compartilhe este post com outros e nos ajude a crescer e melhorar.**
-
-Traduzido e revisado por [Mariana Santos](https://www.linkedin.com/in/mariana-santos-89234a189/?locale=en_US)
-
-[comment]: # (Tudo bem me identificar aqui certo? :)
 
 Consulte estes comandos se você quiser mais. Use o ID ou o nome do containers.
 
