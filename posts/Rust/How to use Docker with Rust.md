@@ -100,6 +100,8 @@
 [How to use Docker commands]: https://www.steadylearner.com/blog/read/How-to-use-Docker-commands
 [How to use React with Rust Actix]: https://www.steadylearner.com/blog/read/How-to-use-React-with-Rust-Actix
 
+[comment]: # (Os seguintes links não estão funcionando (Erro "página não encontrada) JSON Webservice, Rust Blog Example, Tonic CRUD Example by Steadylearner, Official Tonic Guide and React Rust)
+
 <!-- / -->
 
 <!-- Steadylearner Twitter and LinkedIn  -->
@@ -109,15 +111,17 @@
 
 <!--  -->
 
-In this post, we will learn how to use [Docker][How to use Docker commands] with Rust web frameworks.
+In this post, we'll learn how to use [Docker][How to use Docker commands] with Rust web frameworks.
+
+Reviewed by [Mariana Santos](https://www.linkedin.com/in/mariana-santos-89234a189/?locale=en_US)
 
 We already have React and Rust server side code ready at [React Rust]. Clone the repository or use the Docker to see the result first.
 
 ```console
 $docker run -d -p 80:8000 steadylearner/rust && curl localhost
-``` 
+```
 
-Then, the result will be similar to this.
+Then, the result will be similar to this:
 
 [![user-signup](https://www.steadylearner.com/static/images//post/React/user-signup.png)][React Rust]
 
@@ -130,7 +134,7 @@ Then, the result will be similar to this.
 
 ---
 
-I will assume that you are already familiar with Docker and Rust. If you haven't used Docker commands yet, please read [How to use Docker commands].
+I assume you're already familiar with Docker and Rust. If you haven't yet used Docker commands, please, read this Steadylearner post [How to use Docker commands] for more information.
 
 <br />
 
@@ -148,7 +152,7 @@ I will assume that you are already familiar with Docker and Rust. If you haven't
 
 ## 1. Target 0.0.0.0: to use your project with Docker
 
-This is maybe the simplest but most important part to save your time. Verify your server side code. In server/actix/src/main.rs of [React Rust], you can see the code similar to this.
+Perhaps, this is the simplest step, but also the most important to save your time: verify your server side code. In server/actix/src/main.rs of [React Rust], you can see the code similar to this:
 
 ```rust
 extern crate actix_web;
@@ -194,35 +198,35 @@ pub fn main() {
 }
 ```
 
-**Never ever** use **localhost** or **127.0.0.1** etc and only use ports that start with **0.0.0.0:** if you want to containerize your project with Docker later. This is the same for other web frameworks also.
+**Never ever** use **localhost** or **127.0.0.1** etc. **Only** use ports that start with **0.0.0.0:** if you want to place your project in a Docker container later. This is also true for other web frameworks.
 
-The port **8000** is used here to synchronize with React frontend made with Webpack. You can use 80 instead when you want to deploy it to AWS. We will learn how to do that in the later [Rust blog posts].
+The port **8000** is used here to synchronize with React frontend made with Webpack. If you want to deploy it on AWS, use 80 instead. We will learn how to do that in later [Rust blog posts].
 
-If you want more information of the code used here, please read [How to use React with Rust Actix].
+If you want more information about the code used here, please read this Steadylearner post [How to use React with Rust Actix].
 
 <br />
 
 ## 2. Prepare files to use
 
-Rust is compiled language. When you use **cargo run --release**, it makes an executable binary file at **target/release/**.
+Rust is a compiled language. When you use **cargo run --release**, it creates an executable binary file at **target/release/**.
 
-Its name will be equal to your project name at **Cargo.toml** and will be **react_actix**.
+This file will have the same name as your project at **Cargo.toml** and will be **react_actix**.
 
 ```toml
 [package]
 name = "react_actix"
 ```
 
-We don't need other files made from Rust other than that.
+We don't need any other files made from Rust besides this one.
 
 We also have some static files for React frontend code to work at **public** folder.
 
-To sum up, you just need to find how to include these to a Docker image we will make.
+In short, you just need to figure out how to include them in a Docker image that we will doing soon.
 
 1. **react_actix**
 2. **public** folder
 
-It will be no different to use these commands in your console to test it separately in your machine.
+There is no difference between using these commands on your console or testing them on your machine separately.
 
 ```console
 $mkdir Docker
@@ -235,15 +239,15 @@ $mv Docker && ./react_actix
 
 ## 3. Make a Docker image with Dockerfile
 
-In the previous part, we already learnt which files to include in your Docker container.
+In the previous section, we learned which files to include in your Docker container.
 
-What left is to decide which base **Docker image** to use and write a few commands in Dockerfile to make all work.
+What remains is to decide which **Docker image** base to use and write a few commands in Dockerfile to make everything work.
 
-For it is Rust project, it is easy to think we need [the Rust official image from the Dockerhub](https://hub.docker.com/_/rust).
+As this is the Rust project, it is easy to think that we are going to need [the Rust official image from the Dockerhub](https://hub.docker.com/_/rust).
 
-But, we don't need it for we can just execute the **react_actix** binary project with **$./react_actix** inside a Docker container.
+But, we don't need that. We can just execute the **react_actix** binary project with **$./react_actix** inside a Docker container.
 
-You can compare the results.
+Compare the results.
 
 1. Whatever OS you use in your machine.
 
@@ -263,9 +267,9 @@ You can compare the results.
 }
 ```
 
-For we already know the difference, we will finally make a **Dockerfile**. It is just the file to include commands we used manually before in [How to use Docker commands].
+Now that we already know the difference, we will finally make a **Dockerfile**. It is just a file to include commands we used manually before in [How to use Docker commands] Steadylearner previous post.
 
-**It will make a Docker image and not a container** and will be similar to this.
+**It will make a Docker image, not a container** and it will be similar to this:
 
 ```toml
 FROM ubuntu # 1.
@@ -277,31 +281,31 @@ EXPOSE 8000 # 4.
 CMD ["./react_actix"] #5.
 ```
 
-The process is just to make a virtual development environment similar to your mahcine with Docker. Then, you help it to execute few commands we read in the previous part.
+The process consists of making a virtual development environment similar to your machine with Docker. So, you help it to execute some commands that we read in the previous section.
 
 **1.** Use OS or base Docker image you want.
 
-**2.** Use whatever folder name you want for your project.
+**2.** Rename your project as you want.
 
 **3.** We need static files for React frontend and an executable binary file for **Rust**.
 
-You will only need **COPY ./target/release/react_actix /app** if your project is without the frontend code.
+You will only need **COPY ./target/release/react_actix /app** if your project doesn't have the frontend code.
 
 **4.** Expose the port you use in your project outside of your docker container.
 
-You can easily verify it with **$curl localhost** later.
+Easily verify using **$curl localhost** later.
 
-**5.** We execute the Rust web app with this. Nothing complicated here.
+**5.** We execute the Rust web app with this. There is nothing complicated here.
 
-For **Dockerfile** is ready, make a **./docker-build.bash** file similar to this to make a Docker image with it.
+When **Dockerfile** is ready, make a **./docker-build.bash** file, similar to this to create a Docker image.
 
 ```bash
 docker build -t youraccount/rust .
 ```
 
-Execute it with **./docker-build.bash**. It won't take a long time for Docker to build the image.
+Execute it with **./docker-build.bash**. It won't be long before Docker builds the image.
 
-Then, you can verify the result with **$docker images**. It will be similar to this.
+Then, verify the result with **$docker images**. It will be similar to this:
 
 ```console
 REPOSITORY              TAG
@@ -312,50 +316,52 @@ youraccount/rust          latest
 
 ## 4. Verify the result in your machine
 
-The prepartion ends. Make the Docker conatiner from the image you made with this command.
+Preparation ends here. Make the Docker container from the image you made with this command:
 
 ```console
 $docker run -d -p 80:8000 steadylearner/rust
 ```
 
-You can verify the Docker container is made from the image with this **$docker ps -a**.
+To verify if the Docker container was made from the image, use **$docker ps -a**.
 
-It will show the message similar to this.
+The message displayed will look like this:
 
 ```console
 COMMAND        PORTS
 "./react_actix"    0.0.0.0:80->8000/tcp
 ```
 
-We exposed **8000** port in the previous part. The result of it is **8000/tcp** above.
+We exposed **8000** port in the previous part. The result of it is the **8000/tcp** above.
 
-Then, we used port mapping with **-p 80:8000** to test it easily with **curl** and you can see it worked with this.
+Then, we used port mapping with **-p 80:8000** to test it easily with: **curl**. You can check if it worked using this:
 
 ```console
 PORTS
 0.0.0.0:80->8000/tcp
 ```
 
-Everything is ready. Use **$curl localhost** or visit it with your browser. Refresh it also at **/**, **/user** to verify the Rust server side code working well.
+Everything is ready now! Use **$curl localhost** or visit it in your browser. Refresh it at **/**. Use **/user** to verify that the Rust server side code is working well.
 
-If you want, you can push this to DockerHub with a command similar to **$docker push youraccount/rust**.
+To push this to DockerHub, just use a command similar to **$docker push youraccount/rust**.
 
-It is similar to use GitHub and you should make an account and make a repository first.
+If you want to use GitHub, the process is similar. But first, make sure you have an account and a repository.
 
 <br />
 
 ## 5. Conclusion
 
-I hope you made it all work. We learnt how to dockerize Rust web app.
+I hope you made it all work fine! We learned how to dockerize Rust web app.
 
-We used React production files to make it more meaningful. You could use whatever static files or without them also.
+We used React production files to make it more meaningful. You could use any static files or just dismiss them.
 
-In the later [Rust blog posts], we will learn how to deploy Rust Docker images to **AWS**. It won't be difficult for we have various examples already at [React Rust] you can compare.
+In the later [Rust blog posts], we will learn how to deploy Rust Docker images to **AWS**. We have many examples already at [React Rust], so it won't be difficult.
 
-Finding working Rust code is not easy, so I use Express and other frameworks to prototype the projects and write blog posts for them also. If you want to experiment them, please refer to [React Rust] repository.
+Finding a working Rust code isn't easy. I use Express and other frameworks to prototype the projects and to write blog posts. If you want to experiment, check [React Rust] repository.
 
-If you want the latest contents from Steadylearner, follow me at [Twitter] or star [Rust Full Stack].
+Stay on top of the latest Steadylearner content: follow me on [Twitter] or star [Rust Full Stack].
 
 Do you need **a Full Stack Developer who can use Docker and AWS to deploy the projects**? Contact me with [LinkedIn] or [Twitter] and I will help you.
 
 You can invite me to work with your team. I can learn fast if there is a reason for that.
+
+**Thank you! Share this post with others and help us to grow and improve.**
