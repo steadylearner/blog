@@ -44,8 +44,6 @@ Traduzido e revisado por [Mariana Santos](https://www.linkedin.com/in/mariana-sa
 
 [comment]: # (Tudo bem me identificar aqui certo? :)
 
-<br />
-
 <h2 class="red-white">[Pré-requisitos]</h2>
 
 1. [Como instalar Docker]
