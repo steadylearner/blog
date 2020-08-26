@@ -9,100 +9,19 @@
 
 <!-- Link -->
 
-[comment]: # (Os seguintes links não estão funcionando (Erro "página não encontrada) [JSON Webservice], [Rust Blog Example], [Tonic CRUD Example by Steadylearner], [Official Tonic Guide] and [React Rust] e também existem muitos links que não foram utilizados no texto.)
-
+[comment]: # (Os seguintes links não estão funcionando (Erro "página não encontrada) [React Rust]. Eu exclui os links que não estavam sendo utilizados)
 [Steadylearner]: https://www.steadylearner.com
 [Blog Steadylearner]: (https://www.steadylearner.com/blog)
-[Rust Website]: https://www.rust-lang.org/
-
-[Rust Rocket]: https://rocket.rs/
-[Começando Rocket]: https://rocket.rs/v0.4/guide/getting-started
-[Exemplo de Rocket JSON ]: https://github.com/SergioBenitez/Rocket/tree/master/examples/json
-[Redirecionar]: https://api.rocket.rs/v0.4/rocket/response/struct.Redirect.html
-[Tera]: https://tera.netlify.com/
-[Exemplo de Rocket Tera ]: https://github.com/SergioBenitez/Rocket/tree/master/examples/tera_templates
-
-[CORS]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS
-[OPTIONS]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS
-[Rocket CORS]: https://github.com/lawliet89/rocket_cors
-[Exemplos de Rocket CORS ]: https://github.com/lawliet89/rocket_cors/tree/master/examples
-[Exemplos de Rocket CORS fairing]: https://github.com/lawliet89/rocket_cors/blob/master/examples/fairing.rs
-[Exemplo teste de Rocket CORS fairng]: https://github.com/lawliet89/rocket_cors/blob/master/tests/fairing.rs
-
-[Exemplos de Rust Yew]: https://github.com/yewstack/yew/tree/master/examples
-
-[hyper]: https://github.com/hyperium/hyper
-
-[Rust Dotenv]: https://crates.io/crates/dotenv
-[Reqwest]: https://docs.rs/reqwest/0.9.18/reqwest/
-
-[stdweb]: https://github.com/koute/stdweb
-
-[YouTube API]: https://developers.google.com/youtube/v3/getting-started#before-you-start
-[Como usar YouTube API para desenvolvedores]: https://www.google.com/search?q=how+to+use+youtube+api+for+developers
-
 [Rust Full Stack]: https://github.com/steadylearner/Rust-Full-Stack
-[JSON Webservice]: https://github.com/steadylearner/Rust-Full-Stack/tree/master/before/JSON_Webservice
-
-[Exemplo de Blog Rust]: https://github.com/steadylearner/Rust-Full-Stack/tree/master/web/before/rust_blog
-
-[CRA]: https://github.com/facebook/create-react-app
-
-[Buffers de Protocolo]: https://developers.google.com/protocol-buffers/docs/overview
-[Tonic]: https://github.com/hyperium/tonic
-[Rust Postgresql]: https://github.com/sfackler/rust-postgres
-[Rust Postgresql query]: https://docs.rs/postgres/0.15.2/postgres/struct.Connection.html#method.query
-[Execução do Rust Postgresql]: https://docs.rs/postgres/0.15.2/postgres/struct.Connection.html#method.execute
-[Exemplo de Tonic CRUD por Steadylearner]: https://github.com/steadylearner/Rust-Full-Stack/blob/master/grpc/user/proto/user/user.proto
-[Guia oficial Tonic]: https://github.com/hyperium/tonic/blob/master/tonic-examples/helloworld-tutorial.md
-[gRPC Client]: https://github.com/uw-labs/bloomrpc
-
-[Como instalar Postgresql]: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04
-
-[tonic-build]: https://github.com/hyperium/tonic/blob/master/tonic-build/README.md
-
-[Rust uuid]: https://crates.io/crates/uuid
-[chrono]: https://docs.rs/chrono/0.4.9/chrono/
-
-[graphiql]: https://github.com/graphql/graphiql
-
 [React Rust]: https://github.com/steadylearner/React-Rust
-[React Router]: https://github.com/ReactTraining/react-router
 
 <!-- / -->
 
 <!-- Steadylearner Post -->
 
 [Posts sobre Rust]: https://www.steadylearner.com/blog/search/Rust
-[Como instalar Rust]: https://www.steadylearner.com/blog/read/How-to-install-Rust
-[Rust Chat App]: https://www.steadylearner.com/blog/read/How-to-start-Rust-Chat-App
-[Frontend do Rust Yew]: https://github.com/yewstack/yew
-[Yew Counter]: https://www.steadylearner.com/yew_counter
-[Como usar Rust Yew]: https://www.steadylearner.com/blog/read/How-to-use-Rust-Yew
-[Como implantar um Web App Rust]: https://www.steadylearner.com/blog/read/How-to-deploy-Rust-Web-App
-[Como iniciar um Chat App Rust]: https://www.steadylearner.com/blog/read/How-to-start-Rust-Chat-App
-[Fullstack Rust com Yew]: https://www.steadylearner.com/blog/read/Fullstack-Rust-with-Yew
-[Como usar pacotes NPM com Rust Frontend]: https://www.steadylearner.com/blog/read/How-to-use-NPM-packages-with-Rust-Frontend
-[Como usar markdown com partes de código no Rust Yew Frontend]: https://www.steadylearner.com/blog/read/How-to-use-markdown-with-code-snippets-in-Rust-Yew-Frontend
-[Como modulizar seu Rust Frontend]: https://www.steadylearner.com/blog/read/How-to-modulize-your-Rust-Frontend
-[Como escrever código Rust Full Stack]: https://www.steadylearner.com/blog/read/How-to-write-Full-Stack-Rust-code
-[Como usar um modal no Rust]: https://www.steadylearner.com/blog/read/How-to-use-a-modal-in-Rust
-[Como usar roteadores no Rust Frontend]: https://www.steadylearner.com/blog/read/How-to-use-routers-in-Rust-Frontend
-[Como servir arquivos estáticos com Rust]: https://www.steadylearner.com/blog/read/How-to-serve-static-files-with-Rust
-[Como usar um aplicativo de página única com Rust]: https://www.steadylearner.com/blog/read/How-to-use-a-single-page-app-with-Rust
-[Como usar Rust Tera em paths indefinidos]: https://www.steadylearner.com/blog/read/How-to-use-Rust-Tera-for-undefined-paths
-[Como fazer um Webservice JSON com Rust e YouTube API]: https://www.steadylearner.com/blog/read/How-to-make-JSON-Webservice-with-Rust-and-YouTube-API
-[Como usar solicitações CORS e OPTIONS HTTP com Rust Rocket]: https://www.steadylearner.com/blog/read/How-to-use-CORS-and-OPTIONS-HTTP-request-with-Rust-Rocket
-[Como renderizar um vlog para YouTube com Rust Yew fetch API]: https://www.steadylearner.com/blog/read/How-to-render-a-YouTube-vlog-with-Rust-Yew-fetch-API
-
-[Como usar Python em JavaScript]: https://www.steadylearner.com/blog/read/How-to-use-Python-in-JavaScript
-[Como usar React Spring para fazer uma mensagem animada]: https://medium.com/@steadylearner/how-to-use-react-spring-to-animate-your-message-2bd2a7e62a5a
-
-[Como fazer um Webpack com React]: https://www.steadylearner.com/blog/read/How-to-use-Webpack-with-React
-[Actix]: https://github.com/actix/actix-web
 [Como usar comandos Docker]: https://www.steadylearner.com/blog/read/How-to-use-Docker-commands
 [Como usar React com Rust Actix]: https://www.steadylearner.com/blog/read/How-to-use-React-with-Rust-Actix
-
 
 <!-- / -->
 
