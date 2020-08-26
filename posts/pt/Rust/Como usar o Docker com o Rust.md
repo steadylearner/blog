@@ -1,6 +1,6 @@
 <!--
     Post{
-        subtitle: "Learn how to dockerize Rust web projects."
+        subtitle: "Aprenda a dockerizar projetos web com o Rust."
         image: "post/Rust/docker-rust.png",
         image_decription: "Image by Steadylearner",
         tags: "How Docker Rust Actix",
@@ -9,7 +9,8 @@
 
 <!-- Link -->
 
-[comment]: # (Os seguintes links não estão funcionando (Erro "página não encontrada) [React Rust]. Eu exclui os links que não estavam sendo utilizados)
+[comment]: # ((Erro "página não encontrada) [React Rust]. Eu exclui os links que não estavam sendo utilizados)
+
 [Steadylearner]: https://www.steadylearner.com
 [Blog Steadylearner]: (https://www.steadylearner.com/blog)
 [Rust Full Stack]: https://github.com/steadylearner/Rust-Full-Stack
