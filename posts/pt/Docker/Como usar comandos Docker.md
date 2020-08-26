@@ -57,7 +57,7 @@ Este post é um resumo do [Docker Website], [Docker Curriculum] etc. Eu espero q
 
 <br />
 
-<h2 class="blue">índice</h2>
+<h2 class="blue">Índice</h2>
 
 1. Confirme a instalação com Nginx
 2. Configure seu ambiente de desenvolvimento Docker
@@ -299,7 +299,7 @@ const hello = blue("Hello from www.steadylearner.com");
 console.log(hello);
 ```
 
-A mensagem **Hello from www.steadylearner.com** deverá aparecer no seu computador.
+A mensagem **Hello from www.steadylearner.com** deverá aparecer no seu terminal.
 
 Nós verificamos o trabalho dos pacotes NPM em seu container Docker com isto.
 
