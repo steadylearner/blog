@@ -13,7 +13,7 @@
 
 [Steadylearner]: https://www.steadylearner.com
 [Rust Full Stack]: https://github.com/steadylearner/Rust-Full-Stack
-[React Rust]: https://github.com/steadylearner/React-Rust
+[React Rust]: https://github.com/steadylearner/Rust-Full-Stack/tree/master/React_Rust
 
 <!-- / -->
 
