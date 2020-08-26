@@ -228,7 +228,7 @@ Resumidamente, você só precisa descobrir como os incluir na imagem Docker imag
 1. **react_actix**
 2. pasta **public**
 
-Não há diferença entre usar estes comandos em seu console ou os estar separadamente no seu computador.
+Não há diferença entre usar estes comandos em seu terminal ou os testar separadamente usando seu computador.
 
 ```console
 $mkdir Docker
