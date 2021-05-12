@@ -21,6 +21,18 @@
 
 <!-- / -->
 
+[Rust]: https://www.rust-lang.org/
+[Steadylearner]: https://www.steadylearner.com
+
+[EssentialC]: http://cslibrary.stanford.edu/101/EssentialC.pdf
+[The C Programming Lanugage]: https://www.google.com/search?q=the+c+programming+language
+[DigitalOcean]: http://pages.news.digitalocean.com/dcn/AyKQ30vur1Nt8H30LIWxk-j5xHmafGnoECQwn1ooO76IYFHzigM_y4fqCVuHjuXsYYmKVEtVdAWxss0KUtUjfw==/DE3v00e0DIX002276X3M0VM
+[Nginx]: https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04-quickstart
+[Rust Web App]: https://github.com/steadylearner/Rust-Web-App
+[Rocket]: https://rocket.rs/v0.4/guide/configuration/
+
+<!-- / -->
+
 <!-- Steadylearner Post -->
 
 [How to install Rust]: https://www.steadylearner.com/blog/read/How-to-install-Rust
@@ -33,17 +45,17 @@ Rust users mostly end up loving its features such as performance, reliability an
 
 On top of that, there are decent package management tools like cargo, cargo-edit etc. The programming language itself and packages(crates in Rust) are maturing also.
 
-The language developers and contributers are also giving their time to enhance [Webassembly][How to use Rust Yew] integration to attract more Frontend Developers and make web application faster.
+The language developers are also giving their time to enhance [Webassembly][How to use Rust Yew] integration to attract more Frontend Developers and make web application faster.
 
-However, it was difficult to find the real examples for intergating frontend app to Rust and then deploying it to the web.
+However, it was difficult to find the real examples to integrate frontend app to Rust and then deploying it to the web.
 
 I was not sure that I could upload my website to the web with Rust. But I eventually made it and want to share the process with you.
 
-If you have already experience in deploying websites in other languases, deploying Rust will not be so different from deploying Node js or Python backend app.
+If you have already experience in deploying websites in other languages, deploying Rust will not be so different from deploying Node or Python backend app.
 
 1. Buy VPS service such as [DigitalOcean] that offers the same operating system you use in your local machine.
 
-2. Repeat what you have been doing in your local development environment in a vritual machine they give.
+2. Repeat what you have been doing in your local development environment in a virtual machine they give.
 
 3. Configure Apache or Nginx and systemd service worker to work as proxy server
 
@@ -110,14 +122,14 @@ You will not need the **Installing Dependencies for Linux Virtual Machine** if y
 
 Just repeat what you have done in your local machine after you buy VPS service from [DigtialOcean] or whatever service host provide.
 
-If you have problem while folllowing this post, please contact me with [Twitter](https://twitter.com/steadylearner_p) or LinkedIn(https://www.linkedin.com/in/steady-learner-3151b7164/) and I will help you.
+If you have problem while following this post, please contact me with [Twitter](https://twitter.com/steadylearner_p) or [LinkedIn](https://www.linkedin.com/in/steady-learner-3151b7164/) and I will help you.
 
 <br />
 
 ## 1. DigitalOcean Setup
 
 <!-- Use other image instead -->
-[![DigitalOcean Website Screentshot by steadylearner](https://www.steadylearner.com/static/images/post/deploy/DigitalOcean-Main.png)](http://pages.news.digitalocean.com/dcn/AyKQ30vur1Nt8H30LIWxk-j5xHmafGnoECQwn1ooO76IYFHzigM_y4fqCVuHjuXsYYmKVEtVdAWxss0KUtUjfw==/DE3v00e0DIX002276X3M0VM)
+[![DigitalOcean Website Screenshot by steadylearner](https://www.steadylearner.com/static/images/post/deploy/DigitalOcean-Main.png)](http://pages.news.digitalocean.com/dcn/AyKQ30vur1Nt8H30LIWxk-j5xHmafGnoECQwn1ooO76IYFHzigM_y4fqCVuHjuXsYYmKVEtVdAWxss0KUtUjfw==/DE3v00e0DIX002276X3M0VM)
 
 <br />
 
@@ -125,11 +137,11 @@ I wouldn’t write details about using **DigitalOcean** for there are many [docu
 
 Just use Ubuntu 16.04 or Ubuntu 18.04 or whatever you want and the lowest price version to follow this article.
 
-You can use this as an example and hope you already made one.
+You can use this as an example and hope you already made an account.
 
 <br />
 
-[![DigitalOcean Website Screentshot by steadylearner](https://www.steadylearner.com/static/images/post/deploy/DigitalOcean-Create-Droplet.png
+[![DigitalOcean Website Screenshot by steadylearner](https://www.steadylearner.com/static/images/post/deploy/DigitalOcean-Create-Droplet.png
 )](http://pages.news.digitalocean.com/dcn/AyKQ30vur1Nt8H30LIWxk-j5xHmafGnoECQwn1ooO76IYFHzigM_y4fqCVuHjuXsYYmKVEtVdAWxss0KUtUjfw==/DE3v00e0DIX002276X3M0VM)
 
 <br />
@@ -140,7 +152,7 @@ Use the lowest price option. It will be enough to test your project.
 
 <br />
 
-[![DigitalOcean Website Screentshot by steadylearner](https://www.steadylearner.com/static/images/post/deploy/DigitlaOcean-Lowest-Price.png
+[![DigitalOcean Website Screenshot by steadylearner](https://www.steadylearner.com/static/images/post/deploy/DigitlaOcean-Lowest-Price.png
 )](http://pages.news.digitalocean.com/dcn/AyKQ30vur1Nt8H30LIWxk-j5xHmafGnoECQwn1ooO76IYFHzigM_y4fqCVuHjuXsYYmKVEtVdAWxss0KUtUjfw==/DE3v00e0DIX002276X3M0VM)
 
 <br />
@@ -149,7 +161,7 @@ and we will also use Ubuntu 16.04 for our choice.
 
 <br />
 
-[![DigitalOcean Website Screentshot by steadylearner](https://www.steadylearner.com/static/images/post/deploy/DigitalOcean-Ubuntu-16.04.png
+[![DigitalOcean Website Screenshot by steadylearner](https://www.steadylearner.com/static/images/post/deploy/DigitalOcean-Ubuntu-16.04.png
 )](http://pages.news.digitalocean.com/dcn/AyKQ30vur1Nt8H30LIWxk-j5xHmafGnoECQwn1ooO76IYFHzigM_y4fqCVuHjuXsYYmKVEtVdAWxss0KUtUjfw==/DE3v00e0DIX002276X3M0VM)
 
 <br />
@@ -160,7 +172,7 @@ With command **$ssh yoursite@xxx.xxx.x.xx**, it will show you messages like the 
 
 <br />
 
-[![DigitalOcean Website Screentshot by steadylearner](https://www.steadylearner.com/static/images/post/deploy/SSH-Connection-sucess-for-Linux-Ubuntu-16.04.png
+[![DigitalOcean Website Screenshot by steadylearner](https://www.steadylearner.com/static/images/post/deploy/SSH-Connection-sucess-for-Linux-Ubuntu-16.04.png
 )](http://pages.news.digitalocean.com/dcn/AyKQ30vur1Nt8H30LIWxk-j5xHmafGnoECQwn1ooO76IYFHzigM_y4fqCVuHjuXsYYmKVEtVdAWxss0KUtUjfw==/DE3v00e0DIX002276X3M0VM)
 
 <br />
@@ -171,7 +183,7 @@ We are ready with DigitalOcean and we can write code to deploy our Rust Web Appl
 
 Your Linux Virtual Machine is almost empty. It will be easy to think that you have to start from nothing.
 
-It has Git to download your project easily, Vim to edit Nginx and Rust files already. We will see how to use them later.
+It has Git installed to download your project easily, Vim to edit Nginx and Rust files already. We will see how to use them later.
 
 If you forget the domain of your website, you can use
 
@@ -187,13 +199,13 @@ Test it with **$host yourwebsite** instead.
 
 This is very tedious work if you had many dependencies.
 
-For your machine is just empty virtual machine, You have to install **Rust Compiler, Cargo, Node, Nginx** etc to prepare the deployment.
+For your machine is just an empty virtual machine, You have to install **Rust Compiler, Cargo, Node, Nginx** etc to prepare the deployment.
 
 If you are familiar with **Docker**, you could have used it instead to save your time.
 
 What is important is to install Rust to compile your [Rust Web App] and [Nginx] to work as reverse proxy server for it.
 
-To advance, You have to verify minimum requirments are ready with command
+To advance, You have to verify minimum requirements are ready with command
 
 **$sudo nginx -h**
 
@@ -210,7 +222,7 @@ To advance, You have to verify minimum requirments are ready with command
 
 and you are ready to write the real codes to deploy your website.
 
-In this post, we will use **Rust Rocket framework** but you can use Actix or whatever framework and languages you want instead
+In this post, we will use **Rust Rocket framework** but you can use Actix or whatever framework and languages you want instead.
 
 They will work because what you learn really in this post is how to use **Nginx** as **proxy server** for your web app in **POSIX** system.
 
@@ -222,11 +234,11 @@ They will work because what you learn really in this post is how to use **Nginx*
   <img alt="Nginx from its website" src="https://www.steadylearner.com/static/images/post/deploy/nginx.png">
 </section>
 
-You are almost there. You could make it work with the documenations I gave you above.
+You are almost there. You could make it work with the documentations I gave you above.
 
 But following the post will save your time, so I hope you did not tweak anything from the default yet.
 
-You will se that is just the matter of **copy and paste** when you have [a real example][Steadylearner].
+You will see that it is just the matter of **copy and paste** when you have [a real example][Steadylearner].
 
 Refer to the code snippet below for Nginx save it in /etc/nginx/sites-available/ as your-domain.tld.conf
 
@@ -266,7 +278,7 @@ You can refer to the image below.
 
 <br />
 
-**CNAME** is used for simpilicity, you can use **A** or **AAAA** record for www instead if you want to enable **HTTPS** later in this post.
+**CNAME** is used here, but you can use **A** or **AAAA** record for www instead if you want to enable **HTTPS** later in this post.
 
 **2.** The Rust Web framework we will use is [Rocket] and the port for its production is http://0.0.0.0:8000. You had to help nginx to proxy the request to your Rust web application.
 
@@ -305,7 +317,7 @@ alias testn="sudo nginx -t"
 alias foldern="cd /etc/nginx"
 ```
 
-There were no diffiuclt points for Nginx. You didn’t even have to edit default **nginx.conf** file.
+There were no difficult points. You didn’t even have to edit default **nginx.conf** file.
 
 If you like to serve **gzip** file for your Rust Rocket or other web application.
 
@@ -342,16 +354,16 @@ $curl http://yourdomain.com --silent -H "Accept-Encoding: gzip, other things" --
 
 and the result will be much better and easier than do it without Nginx.
 
-If you managed to serve gzip files on your own, you can use
+If you managed to serve gzip files on your own with Rust or whatever language, you can use
 
 ```console
 $find . | gzip *.ext
 $find . | gzip -d *.gz
 ```
 
-to compress and decompress files in a target folder.
+to compress and decompress files in a target folder to serve.
 
-You do not need webpack compressor or else to do that.
+You do not need Webpack compressor or else to do that.
 
 <br />
 
@@ -361,7 +373,7 @@ Your virtual machine was almost empty but you could edit and save the files with
 
 You could also use **git** to download files for they are already pre-installed.
 
-You may donwload your project files from you GitHub repository with command like
+You may download your project files from you GitHub repository with command like
 
 ```console
 $git clone https://github.com/steadylearner/Rust-Web-App.git.
@@ -373,7 +385,7 @@ You might want to do it on your home directory. For that, use $cd ~ && mkdir you
 
 You know better what you are doing than others. It is just repeating what you have done to build the entire project. The only difference is paths to serve and link files and directories.
 
-If you are using Rust [Rocket] for this example,
+If you are using Rust Rocket for this example,
 
 1. Download the files in your virtual machine
 
@@ -383,7 +395,7 @@ If you are using Rust [Rocket] for this example,
 
 4. Then, we will use [systemd](https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files) service to automate the process in the next part
 
-Wanna update files later after you deploy your wbsite?
+Wanna update files later after you deploy your website?
 
 1. You have to repeat the command **$cargo run --release** whenever you tweaked your Rust files.
 
@@ -399,13 +411,13 @@ You almost made it. We will refer to the [Rocket] for development environment to
 
 It explains that there are development, staging and production environment and will be similar in other web frameworks.
 
-For we are dealing with prodcution files and ready to deploy it to the web, only care for production part.
+For we are dealing with production files and ready to deploy it to the web, only care for production part.
 
 When you use [Rocket], it already has its own default configuration and you would not need to edit that much.
 
-Read [its documenation] and find those parts in description will be used in **systemd service** later.
+Read its documentation and find those parts in description will be used in **systemd service** later.
 
-If you want to learn more about what **servie** mean here, you may refer to
+If you want to learn more about what **service** mean here, you may refer to
 
 "A service unit describes how to manage a service or application on the server. This will include how to start or stop the service, under which circumstances it should be automatically started, and the dependency and ordering information for related software"
 
@@ -433,13 +445,13 @@ WantedBy=multi-user.target
 
 You should find the right path for your project and everything is ready.
 
-Test in your virtual machien console with
+Test in your virtual machine console with
 
 ```console
 $sudo systemctl start your-domain.tld.service.
 ```
 
-That will make your [Rocket] or other framework you use to compile production files and serve them to port instead of you.
+That will make your Rocket or any web framework you use to compile production files and serve them to port instead of you.
 
 You may visit your domain your-domain.tld at this point.
 
@@ -453,7 +465,7 @@ in your ~/.bashrc file or you can use **$ping** instead if you are familiar with
 
 The result will be response from Nginx or your production web pages if you could make it work.
 
-You can verify the real exmaple at [Steadylearner].
+You can verify the real example at [Steadylearner].
 
 **Hope you made it.**
 
@@ -477,7 +489,7 @@ That was all to deploy your Rust Web application to the web with **Nginx** and *
 
 You may use other web frameworks also. You just need to edit the paths and configuration parts for it.
 
-If you want to allow HTTPS for your website, please follow the next part.
+If you want to allow HTTPS for your website also, please follow the next part.
 
 <br />
 
@@ -490,7 +502,7 @@ $sudo certbot --nginx # 1.
 $sudo certbot renew --dry-run # 2.
 ```
 
-1. Refer to the official documenation from [cerbot](https://certbot.eff.org/docs/using.html#nginx).
+1. Refer to the official documentation from [cerbot](https://certbot.eff.org/docs/using.html#nginx).
 
 2. Read [the documentation](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04) from DigitalOcean about **renew --dry -run** command
 
@@ -525,14 +537,14 @@ You can deploy a web application made with **Rust**.
 
 I felt that there is nothing special in using Rust for web development with Nginx and Linux.
 
-Only ports to serve files would be different from others and the rest of the process will be similiar.
-
-You may do the same for other programming languages and frameworks also.
+Only ports to serve files would be different from others and the rest of the process will be similar. You may do the same for other programming languages and frameworks also.
 
 What you learnt is how to use Nginx and systemld for whatever web frameworks written in any programming languages.
 
 It was the sum of the previous posts I wrote before.
 
 You may visit [one of them](https://medium.com/@steadylearner/how-to-deploy-rust-web-application-8c0e81394bd5) if you have problem with this post or you may search [How to deploy Rust](https://www.google.com/search?&q=how+to+deploy+rust).
+
+Follow me if you want more posts for Rust, React, Node, Python, Haskell, Solidity, Polkadot etc.
 
 **Thanks and please share this post with others**.
