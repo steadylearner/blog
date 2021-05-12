@@ -60,8 +60,6 @@
 
 In this post, we'll learn how to use Rust [Warp]. Starting from [the current official example at GitHub][Warp official example]. Then, we are going to learn how to modulize it.
 
-Reviewed by [Mariana Santos](https://www.linkedin.com/in/mariana-santos-89234a189/?locale=en_US)
-
 If you are already familiar with Rust and want to save your time, please, just clone the [Rust Full Stack] repository and refer to [Warp][Warp examples] and [microservice example][microservices_with_docker] there.
 
 ```console
@@ -258,11 +256,15 @@ You can see that we will make several folders like routes/, handlers/, api/, tes
 
 You can see a lot of **mod.rs** there. But, the contents of this will be very simple with **pub mod hello_route** etc. Think about them just as helpers to export other files inside each folder.
 
-If you want more information about this, please refer to [How to modulize your Rust Frontend] or [Rust Yew frontend example](https://github.com/steadylearner/Rust-Full-Stack/tree/master/web/src).
+If you let me explain it with more information below, it will be 
 
-(Rust wants you to be specific with everything, exporting and importing the modules too. If you find its module system difficult, first research what represents them. It will be **mod.rs** in each folder and **main.rs** or **lib.rs** on the top level directory of your Rust project. **crate** will represent main.rs or lib.rs and will work as if they were published **crate** or **similar to package in JavaScript**. **self** will be used to represent **main.rs** or **lib.rs itself** inside themselves and use modules imported in them. You may want to use **crate** keyword but it won't because it is already used inside **extern crate somecrate** syntax. There are so many texts, but I left them there help. It will be better to learn this using examples.)
+1. Rust wants you to be specific with everything, exporting and importing the modules too. If you find its module system difficult, first research what represents them. It will be **mod.rs** in each folder and **main.rs** or **lib.rs** on the top level directory of your Rust project. 
 
-[comment]: # (Lembre-se de melhorar esta parte :D)
+2. **crate** will represent main.rs or lib.rs and will work as if they were published **crate** or **similar to package in JavaScript**. **self** will be used to represent **main.rs** or **lib.rs itself** inside themselves and use modules imported in them. 
+
+3. You may want to use **crate** keyword but it won't work because it is already used inside **extern crate somecrate** syntax.
+
+If you want more information about this, please refer to [How to modulize your Rust Frontend] or [Rust Yew frontend example](https://github.com/steadylearner/Rust-Full-Stack/tree/master/web/src) or read offical Rust documenation for it.
 
 So, without those mod.rs files, what we need will be just these:
 
@@ -581,7 +583,7 @@ Test on your own with this command on Linux while your Warp server is ready in a
 $ps -eo size,pid,user,command --sort -size | awk '{ hr=$1/1024; printf("%13.2f Mb ",hr) } { for ( x=4 ; x<=NF ; x++ ) { printf("%s ",$x) } print "" }' | cut -d "" -f2 | cut -d "-" -f1
 ```
 
-2. Also, you can include **grep** and Linux pipe **|** to see only how much memory Warp needs.
+2. You can also include **grep** and Linux pipe **|** to see only how much memory Warp needs.
 
 ```console
 $ps -eo size,pid,user,command --sort -size | awk '{ hr=$1/1024; printf("%13.2f Mb ",hr) } { for ( x=4 ; x<=NF ; x++ ) { printf("%s ",$x) } print "" }' | cut -d "" -f2 | cut -d "-" -f1 | grep "hello_world"
@@ -606,17 +608,3 @@ Stay on top of the latest Steadylearner content: follow me on [Twitter] and [Git
 You can also **star** [Rust Full Stack].
 
 **Share with others to help them find the repository better and start programming Rust easily**.
-
-[Donate] **to help this website persist** and **give more time for the author to write more posts**.
-
-Do you need **a Full Stack Rust Developer** who can deploy the projects with Docker, AWS etc? Contact me with [LinkedIn] and I will help you.
-
-I really want to find where to spend my skills.
-
-**You can invite me to work for your company. I can help you with Rust, JavaScript, Python and Golang with Docker and AWS.**
-
-**I want to let special thanks to the Rust community who could find values with my work to share my Rust learning.**
-
-**Without them, I wouldn't have written this blog post and made those examples.**
-
-(Rust will be used a lot more before and will have many opportunities this year. I want these blog posts to be able to contribute to that.)
