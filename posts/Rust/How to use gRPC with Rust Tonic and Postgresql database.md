@@ -103,9 +103,7 @@
 
 In this post, we will learn how to use Rust [Tonic] gRPC crate. We will learn how to implement CRUD with [Postgresql database][Rust Postgresql].
 
-The purpose of it is to help you to have the working Rust Tonic code and start your own porject immediately with it.
-
-If you want the result first, visit [Tonic CRUD Example by Steadylearner] set up database with **user.sql** in it and use **$cargo run --release** to start the project in your machine.
+The purpose of it is to help you to have the working Rust Tonic code and start your own project immediately with it.
 
 <br />
 
@@ -220,9 +218,9 @@ service Crud { // Use whatever name you want, this is for blog posts and not pro
 }
 ```
 
-Nothing complicated here. It is a little bit verbose. But, It is to make them more explict and easily write separate logics for them later. 
+Nothing complicated here. It is a little bit verbose. But, it is to make them more explicit and easily write separate logics for them later. 
 
-If you have better options for them or expertise of gRPC, please contact me with [Twitter] or make a github issue for this post etc.
+If you have better options for them or expertise of gRPC, please contact me with [Twitter] or make a Github issue for this post etc.
 
 Finally, we will make those types we used above in our **Crud** RPC method. RPC types are defined as messages which contain typed fields. They will be similar to this.
 
@@ -711,7 +709,7 @@ impl Crud for User {
 }
 ```
 
-There were many Rust codes here. So it may be complicated to start with. I want you to test your project with **get_user** and **list_users** parts first. Then, you can improve it while you refer to these separate comments.
+There were many lines of Rust code here. So it may be complicated to start with. I want you to test your project with **get_user** and **list_users** parts first. Then, you can improve it while you refer to these separate comments.
 
 **1.** When you read [Rust Postgresql] documentation and examples, you can see that there are [execute][Rust Postgresql execute] and [query][Rust Postgresql query] API to use Postgresql SQL commands. The difference is that execute retunrs **the number of rows modified** query returns data(returning the resulting rows"). You should find when to use them depending on your needs.
 
@@ -819,7 +817,7 @@ It will be easy to find how this works if you read [Official Tonic Guide] alread
 
 I want you already installed [gRPC Client] in your machine. You should have **BloomRPC version.AppImage** executable file in your **release** folder.
 
-You may manually execute it everytime or refer to the process similar to this with your editor.
+You may manually execute it or refer to the process similar to this with your editor.
 
 Use **pwd** to find the location of the gRPC client and **$vim ~/.bashrc** to include alias similar to this.
 
@@ -851,7 +849,7 @@ When you click each methods, it will give the default value at the editor part. 
 
 For this example, you should have cautions when you define value for **"date_of_birth"** part. You should use correct **DATE** type string for Rust and Postgresql.
 
-When the programm pauses, you can stop it easily by clicking the same button you used to send gRPC request.
+When the process pauses, you can stop it easily by clicking the same button you used to send gRPC request.
 
 Refer to the request examples I let it here before you use it.
 
@@ -912,17 +910,10 @@ Test the gRPC server end points with your own code. Then, write more complicated
 
 ## 7. Conclusion
 
-I hope you made it work. What left will be mostly to edit protobuf defintion and write more Rust codes to handle database relevant logics.
+I hope you made it work. You can edit the protobuf definition for your own project and write more Rust code to handle database relevant logics.
 
 Rust and [Tonic] helped me to learn and write better gRPC codes. But, it was difficult to find the working examples with database integration and want this post be helpful for others.
 
-The project will be used with more [Rust blog posts].
+If you want the latest contents from Steadylearner, follow me here, [Twitter] or star [Rust Full Stack].
 
-For example, we will learn how to containerize them with Docker, make it work with Actix server and upload them to AWS etc.
-
-If you want the latest contents from Steadylearner, follow me at [Twitter] or star [Rust Full Stack].
-
-Do you need **a Full Stack Rust Developer**? Contact me with [LinkedIn] or [Twitter] and I will help you.
-
-You can invite me to work with your team. I can learn fast if there is a reason for that.
-
+Do you need a developer? Contact me with [LinkedIn] or [Twitter] and I will help you.
