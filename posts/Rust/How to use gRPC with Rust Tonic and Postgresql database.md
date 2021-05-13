@@ -101,7 +101,7 @@
 
 <!--  -->
 
-In this post, we will learn how to use Rust [Tonic] gRPC crate. We will learn how to implement CRUD with [Postgresql database][Rust Postgresql].
+In this post, we will learn how to use Rust [Tonic] gRPC crate and implement CRUD with [Postgresql database][Rust Postgresql].
 
 The purpose of it is to help you to have the working Rust Tonic code and start your own project immediately with it.
 
@@ -268,9 +268,9 @@ message Users {
 }
 ```
 
-You can see that I used **string** type for **date_of_birth** instead of **date**. I used that because I couldn't find the example to correctly type **DATE** in protobuf and make it also work with [Tonic], [protocol buffers] and Rust type system.
+You can see that I used **string** type for **date_of_birth** instead of **date**. I did that because I couldn't find the example to correctly type **DATE** in protobuf and make it also work with [Tonic], [protocol buffers] and Rust type system.
 
-If you are an expert with this and have a better way, please help with this.
+If you are an expert with this and have a better way, you can help me to correct this.
 
 The complete **.proto** file for our CRUD project will be similar to this.
 
@@ -405,7 +405,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
 Nothing complicated here. You just need to modify the file name from other examples. This makes **tonic-build** to compile your **protobufs** files to work with your Rust gRPC projects.
 
-It automatically build some Rust moudles you can use later with your Rust code depending on the protobuf definitions you used in your protobuf files. You can verfiy this with the Rust code you will read later.
+It automatically builds some Rust modules you can use later with your Rust code depending on the protobuf definitions you used in your protobuf files. You can verify this with the Rust code you will read later.
 
 If you want more details, please refer to [tonic-build].
 
@@ -914,6 +914,6 @@ I hope you made it work. You can edit the protobuf definition for your own proje
 
 Rust and [Tonic] helped me to learn and write better gRPC codes. But, it was difficult to find the working examples with database integration and want this post be helpful for others.
 
-If you want the latest contents from Steadylearner, follow me here, [Twitter] or star [Rust Full Stack].
+If you want the latest contents, follow me here, [Twitter] or star [Rust Full Stack].
 
 Do you need a developer? Contact me with [LinkedIn] or [Twitter] and I will help you.
