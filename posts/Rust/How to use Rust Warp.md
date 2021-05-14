@@ -1,14 +1,3 @@
-<!--
-    Post{
-        subtitle: "Learn how to make a web project with Rust",
-        image: "post/web/how-to-use-rust-warp.png",
-        image_decription: "Image made with CSS by Steadylearner",
-        tags: "How Rust Warp use",
-    }
--->
-
-<!-- Link -->
-
 [Steadylearner]: https://www.steadylearner.com
 [Rust Website]: https://www.rust-lang.org/
 [Learn Rust]: https://doc.rust-lang.org/book/
@@ -412,13 +401,11 @@ You may think of what are **BoxedFilter<()>** and **.boxed()** here. Think of th
 **2.** This will be the payload of this file. You define what you want to **filter** (use) of the user requests here.
 
 **3.** Only receive (filter) GET requests.
-**4.** These starts with /hello prefix we did before.
+**4.** This starts with /hello prefix we did before.
 
 **5.** "Warp, accept param with **String** type only."
 
-You can see that it will be the argument of the function we will make in **route_hanlder** later.
-
-[comment]: # (aqui você quis dizer "handler"?)
+You can see that it will be the argument of the function we will make in **route_handler** later.
 
 [You can also use custom types such as Post, NewPost.](https://github.com/steadylearner/Rust-Full-Stack/blob/master/warp/database/2.%20with_db_pool/src/models/post.rs)
 
@@ -597,8 +584,6 @@ $ps -eo size,pid,user,command --sort -size | awk '{ hr=$1/1024; printf("%13.2f M
 
 ## 7. Conclusion
 
-[If you want to test Warp more, you can refer to this.](https://github.com/steadylearner/Rust-Warp-Example)
-
 I hope you made it all work and managed to learn how to use [Warp] with this post. If you want to learn more about it, you can find more [Warp examples].
 
 [You can Dockerize it](https://www.steadylearner.com/blog/read/How-to-use-Docker-with-Rust), use it with a [React single page app][React Rust], [database][Warp database example], [deploy them to AWS][Steadylearner] etc.
@@ -612,3 +597,4 @@ Stay on top of the latest Steadylearner content: follow me on [Twitter] and [Git
 You can also **star** [Rust Full Stack].
 
 **Share with others to help them find the repository better and start programming Rust easily**.
+
