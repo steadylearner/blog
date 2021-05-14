@@ -60,6 +60,8 @@
 
 In this post, we'll learn how to use Rust [Warp]. Starting from [the current official example at GitHub][Warp official example]. Then, we are going to learn how to modulize it.
 
+[If you want to test Warp more after you read this post, you can refer to this.](https://github.com/steadylearner/Rust-Warp-Example)
+
 If you are already familiar with Rust and want to save your time, please, just clone the [Rust Full Stack] repository and refer to [Warp][Warp examples] and [microservice example][microservices_with_docker] there.
 
 ```console
