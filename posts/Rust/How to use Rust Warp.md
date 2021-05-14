@@ -595,6 +595,8 @@ $ps -eo size,pid,user,command --sort -size | awk '{ hr=$1/1024; printf("%13.2f M
 
 ## 7. Conclusion
 
+[If you want to test Warp more, you can refer to this.](https://github.com/steadylearner/Rust-Warp-Example)
+
 I hope you made it all work and managed to learn how to use [Warp] with this post. If you want to learn more about it, you can find more [Warp examples].
 
 [You can Dockerize it](https://www.steadylearner.com/blog/read/How-to-use-Docker-with-Rust), use it with a [React single page app][React Rust], [database][Warp database example], [deploy them to AWS][Steadylearner] etc.
