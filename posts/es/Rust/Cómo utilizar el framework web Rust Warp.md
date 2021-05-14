@@ -1,5 +1,6 @@
 <!-- Closure - cierrre? -->
 <!-- Rust shouldn't be translated to ferragem -->
+<!-- Star? github in Espanhol -->
 
 [Steadylearner]: https://www.steadylearner.com
 [Rust Website]: https://www.rust-lang.org/
@@ -69,28 +70,27 @@ $cargo run --release
 
 Para construir una aplicación full stack con Rust, consulte [How to use Rust Yew] para la parte de Rust frontend. Puedes utilizar su Fetch API y solicitar datos de los servidores de Rust para renderizar sus páginas.
 
-
 <br />
 
 <h2 class="red-white">[Requisito previo]</h2>
 
-1. [Cómo instalar el Rust]
-2. [Documentación de Warp](Warp documentation) y [ejemplos oficiales de Warp]([Warp official examples])
-3. [El artículo que te ayudará a encontrar mejor los Futuros, Servicios y Filtros](https://blog.twitter.com/engineering/en_us/a/2011/finagle-a-protocol-agnostic-rpc-system.html)
+1. [How to install Rust]
+2. [Warp documentation] and [Warp official examples]
+3. [The article to help you find Futures, Services and Filters better](https://blog.twitter.com/engineering/en_us/a/2011/finagle-a-protocol-agnostic-rpc-system.html)
 4. [FP in Rust]
-5. [Leyendo las firmas de las funciones de Rust](Reading Rust function signatures)
-6. [Programación tácita en el mundo real parte 1](Real world Tacit programming part 1) y [Programación tácita en el mundo real parte 2 ](Real world Tacit programming part 2)
+5. [Reading Rust function signatures]
+6. [Real world Tacit programming part 1] and [Real world Tacit programming part 2]
 7. [Rust closures are hard]
 8. [Rust Future crate](https://docs.rs/futures), [Future by Example](https://docs.rs/future-by-example/0.1.0/future_by_example/) and [Rust future and_then](https://docs.rs/futures/0.3.1/futures/future/trait.TryFutureExt.html#method.and_then)
-
 ---
 
-En primer lugar, debes instalar Rust, si aún no lo tienes. La entrada del blog [Cómo instalar Rust te ayudará](How to install Rust). 
+En primer lugar, debes instalar Rust, si aún no lo tienes. La entrada del blog [Cómo instalar Rust te ayudará][How to install Rust]. 
+
 Si es necesario, visita [el sitio web de Rust](Rust Website) para obtener más información.
 
 Asumo que ya estás familiarizado con Rust. Si no lo estás, por favor, [aprende a usarlo primero][Learn Rust].
 
-Antes de leer este post, espero que leas completamente [la documentación de Warp]([Warp documentation]) y [los ejemplos oficiales de Warp]([Warp official examples]).
+Antes de leer este post, espero que leas completamente [la documentación de Warp][Warp documentation] y [los ejemplos oficiales de Warp][Warp official examples].
 Después de instalar la dependencia, utilice este comando:
 
 ```console
@@ -99,7 +99,7 @@ $cargo doc -p warp --open
 
 Será útil pasar más tiempo leyendo [el ejemplo de enrutamiento del autor](https://github.com/seanmonstar/warp/blob/master/examples/routing.rs).
 
-Fíjate que el autor utiliza Closures][Rust closures are hard] como API principal del framework. He puesto a tu disposición varias documentaciones para ayudarte a entender mejor su funcionamiento.
+[Fíjate que el autor utiliza Closures][Rust closures are hard] como API principal del framework. He puesto a tu disposición varias documentaciones para ayudarte a entender mejor su funcionamiento.
 
 [Encuentra más información sobre and_then.](https://www.google.com/search?&q=rust+and_then)
 
@@ -123,11 +123,9 @@ Fíjate que el autor utiliza Closures][Rust closures are hard] como API principa
 
 La estructura de los proyectos de este post es opinable.
 
-(I hope you also spend time to read [Express documentation.](https://expressjs.com/en/starter/installing.html))
-
 Encontré que los proyectos Warp pueden ser organizados de manera similar a los [Express]. Asumiendo que ya estás familiarizado con los sistemas de módulos de Rust, esto no será difícil de hacer.
 
-(Espero que también dediques tiempo a leer la documentación de [Express]((https://expressjs.com/en/starter/installing.html))).
+Espero que también dediques tiempo a leer la documentación de [Express]((https://expressjs.com/en/starter/installing.html)).
 
 <br />
 
@@ -208,7 +206,7 @@ Con la ayuda de esto, la API de Warp se vuelve muy fácil con los cierres y ser�
 
 Pero, a diferencia de JavaScript, no es fácil hacer que los cierres sean reutilizables en todo el proyecto. Por lo tanto, usaremos **funciones** y **macros** en su lugar.
 
-5. Antes, hicimos un **hello** API y lo guardamos en la variable hello y aprendimos cómo se hacían. Deja que el Warp lo sirva con esto:
+**5.** Antes, hicimos un **hello** API y lo guardamos en la variable hello y aprendimos cómo se hacían. Deja que el Warp lo sirva con esto:
 
 **6.** [Prefiero usar 0.0.0.0 en lugar de localhost y su alias 127.0.0.1 para acoplar aplicaciones](https://www.google.com/search?&q=why+use+0.0.0.0+instead+of+localhost) fácilmente para usar [Docker después facilmenete][How to use Docker with Rust].
 
@@ -246,11 +244,11 @@ Puedes ver un montón de **mod.rs** allí. Pero, el contenido de esto será muy 
 
 Si me dejas explicarlo con más información a continuación, será
 
-1. Rust quiere que seas específico con todo, exportando e importando los módulos también. Si encuentras su sistema de módulos difícil, primero investiga qué los representa. Será **mod.rs** en cada carpeta y **main.rs** o **lib.rs** en el directorio de nivel superior de tu proyecto Rust. 
+**1.** Rust quiere que seas específico con todo, exportando e importando los módulos también. Si encuentras su sistema de módulos difícil, primero investiga qué los representa. Será **mod.rs** en cada carpeta y **main.rs** o **lib.rs** en el directorio de nivel superior de tu proyecto Rust. 
 
-2. **crate** representará a main.rs o lib.rs y funcionará como si se publicaran crate o algo similar a package en JavaScript. **self** se utilizará para representar a **main.rs** o **lib.rs** dentro de ellos mismos y utilizar los módulos importados en ellos. 
+**2.** **crate** representará a main.rs o lib.rs y funcionará como si se publicaran crate o algo similar a package en JavaScript. **self** se utilizará para representar a **main.rs** o **lib.rs** dentro de ellos mismos y utilizar los módulos importados en ellos. 
 
-3. Es posible que quiera utilizar la palabra clave **crate** pero no funcionará porque ya se utiliza dentro de la sintaxis **extern crate somecrate**.
+**3.** Es posible que quiera utilizar la palabra clave **crate** pero no funcionará porque ya se utiliza dentro de la sintaxis **extern crate somecrate**.
 
 Si quieres más información sobre esto, por favor, consulta [Cómo modular tu Rust Frontend][How to modulize your Rust Frontend] o [Rust Yew frontend de ejemplo](https://github.com/steadylearner/Rust-Full-Stack/tree/master/web/src) o lee la documentación oficial de Rust para ello.
 
@@ -562,13 +560,13 @@ Linux Ubuntu 18.04).
 
 Prueba por tu cuenta con este comando en Linux mientras tu servidor Warp está listo en otra consola.
 
-1. Para ver todos los usos de memoria en su sistema, utilice esto: 
+**1.** Para ver todos los usos de memoria en su sistema, utilice esto: 
 
 ```console
 $ps -eo size,pid,user,command --sort -size | awk '{ hr=$1/1024; printf("%13.2f Mb ",hr) } { for ( x=4 ; x<=NF ; x++ ) { printf("%s ",$x) } print "" }' | cut -d "" -f2 | cut -d "-" -f1
 ```
 
-2. También puede incluir **grep** y Linux pipe **|** para ver sólo la cantidad de memoria que necesita Warp. 
+**2.** También puede incluir **grep** y Linux pipe **|** para ver sólo la cantidad de memoria que necesita Warp. 
 
 ```console
 $ps -eo size,pid,user,command --sort -size | awk '{ hr=$1/1024; printf("%13.2f Mb ",hr) } { for ( x=4 ; x<=NF ; x++ ) { printf("%s ",$x) } print "" }' | cut -d "" -f2 | cut -d "-" -f1 | grep "hello_world"
@@ -590,7 +588,4 @@ El desarrollo web con Rust no es todavía la corriente principal. De hecho, no f
 
 Mantente al tanto de los últimos contenidos de Steadylearner: sígueme en [Twitter] y [GitHub].
 
-You can also **star** [Rust Full Stack].
-
-**Share with others to help them find the repository better and start programming Rust easily**.
-
+**Comparte con otros para ayudarles a encontrar mejor el repositorio y empezar a programar Rust fácilmente.**
