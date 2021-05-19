@@ -1,7 +1,3 @@
-<!-- Closure - cierrre? -->
-<!-- Rust shouldn't be translated to ferragem -->
-<!-- Star? github in Espanhol -->
-
 [Steadylearner]: https://www.steadylearner.com
 [Rust Website]: https://www.rust-lang.org/
 [Learn Rust]: https://doc.rust-lang.org/book/
@@ -51,7 +47,9 @@
 
 <!--  -->
 
-En este post, we'll learn how to use Rust [Warp]. Empezando por [el ejemplo oficial actual en GitHub][Warp official example]. Luego, vamos a aprender a modulizarlo.
+En este post, aprenderemos a utilizar Rust [Warp]. Empezando por [el ejemplo oficial actual en GitHub][Warp official example]. Luego, vamos a aprender a modulizarlo.
+
+[You can find the English version of it here.](https://dev.to/steadylearner/how-to-use-rust-warp-web-framework-2b4e)
 
 [Si desea probar Warp más después de leer esta publicación, puede consultar esto.](https://github.com/steadylearner/Rust-Warp-Example)
 
@@ -82,6 +80,7 @@ Para construir una aplicación full stack con Rust, consulte [How to use Rust Ye
 6. [Real world Tacit programming part 1] and [Real world Tacit programming part 2]
 7. [Rust closures are hard]
 8. [Rust Future crate](https://docs.rs/futures), [Future by Example](https://docs.rs/future-by-example/0.1.0/future_by_example/) and [Rust future and_then](https://docs.rs/futures/0.3.1/futures/future/trait.TryFutureExt.html#method.and_then)
+
 ---
 
 En primer lugar, debes instalar Rust, si aún no lo tienes. La entrada del blog [Cómo instalar Rust te ayudará][How to install Rust]. 
@@ -99,7 +98,7 @@ $cargo doc -p warp --open
 
 Será útil pasar más tiempo leyendo [el ejemplo de enrutamiento del autor](https://github.com/seanmonstar/warp/blob/master/examples/routing.rs).
 
-[Fíjate que el autor utiliza Closures][Rust closures are hard] como API principal del framework. He puesto a tu disposición varias documentaciones para ayudarte a entender mejor su funcionamiento.
+[Fíjate que el autor utiliza clausuras][Rust closures are hard] como API principal del framework. He puesto a tu disposición varias documentaciones para ayudarte a entender mejor su funcionamiento.
 
 [Encuentra más información sobre and_then.](https://www.google.com/search?&q=rust+and_then)
 
@@ -188,7 +187,7 @@ Para aprender más sobre la programación asíncrona con Rust, por favor, lee to
 
 Si está familiarizado con otro framework web como Express, compárelo con la parte req(requisitos). La diferencia es que usted expresa sólo lo que quiere permitir. A continuación, utilizar con la API proporcionada por Warp. Compárelo con routes/hello_route.rs más adelante.
 
-**4.** Aquí se utiliza el cierre Rust. (Si está familiarizado con Express, compárelo con la parte res(respond).
+**4.** Aquí se utiliza el clausura Rust. (Si está familiarizado con Express, compárelo con la parte res(respond).
 
 Vea que podría usar la variable **nombre** aquí dentro de || para usar el parámetro String que permitimos antes. Después, podrías expresar lo que quieres hacer con esto:
 
@@ -198,13 +197,13 @@ format!("Hello, {}!", name)
 
 Compárelo con **handlers/hello_handler.rs** más adelante.
 
-Si eres nuevo en Rust, puede que te preguntes cómo funciona el cierre sin tener que escribir aquí la variable, los params, el valor de retorno y la firma de la función, etc.
+Si eres nuevo en Rust, puede que te preguntes cómo funciona el clausura sin tener que escribir aquí **la variable, los params, el valor de retorno y la firma de la función,** etc.
 
 Esto se debe a que el compilador de Rust infiere los tipos para ellos en lugar de usted. Si has leído la documentación sobre esto, será fácil averiguar cómo funcionan.
 
-Con la ayuda de esto, la API de Warp se vuelve muy fácil con los cierres y será similar al uso de funciones de flecha en JavaScript.
+Con la ayuda de esto, la API de Warp se vuelve muy fácil con los clausuras y será similar al uso de funciones de flecha en JavaScript.
 
-Pero, a diferencia de JavaScript, no es fácil hacer que los cierres sean reutilizables en todo el proyecto. Por lo tanto, usaremos **funciones** y **macros** en su lugar.
+Pero, a diferencia de JavaScript, no es fácil hacer que los clausuras sean reutilizables en todo el proyecto. Por lo tanto, usaremos **funciones** y **macros** en su lugar.
 
 **5.** Antes, hicimos un **hello** API y lo guardamos en la variable hello y aprendimos cómo se hacían. Deja que el Warp lo sirva con esto:
 
@@ -218,7 +217,7 @@ Espero que esta breve explicación le haya servido de ayuda. Por favor, lea toda
 
 Anteriormente, logramos hacer funcionar el ejemplo oficial de Warp y aprendimos los detalles de cada parte.
 
-Vamos a refactorizar el ejemplo usando funciones en lugar del cierre que se usa allí. Al final del proceso, todo el proyecto se verá así:
+Vamos a refactorizar el ejemplo usando funciones en lugar del clausura que se usa allí. Al final del proceso, todo el proyecto se verá así:
 
 ```console
 ├── Cargo.toml
@@ -238,7 +237,7 @@ Vamos a refactorizar el ejemplo usando funciones en lugar del cierre que se usa 
 │       └── mod.rs
 ```
 
-Puedes ver que haremos varias carpetas como routes/, handlers/, api/, tests/ etc y archivos dentro de ellas.
+Puedes ver que haremos varias carpetas como **routes/, handlers/, api/, tests/** etc y archivos dentro de ellas.
 
 Puedes ver un montón de **mod.rs** allí. Pero, el contenido de esto será muy simple con **pub mod hello_route etc**. Piensa en ellos sólo como ayudantes para exportar otros archivos dentro de cada carpeta.
 
@@ -444,7 +443,7 @@ Compárelo con lo que usamos antes en la primera parte
 .map(|name| format!("Hello, {}!", name));
 ```
 
-Es cierto que los Rust Closures son mucho más sencillos de usar y prototipar tu aplicación Warp. Utilízalos primero en main.rs. Cuando quieras modularla, sepáralos en routes y handlers.
+Es cierto que los Rust clausuras son mucho más sencillos de usar y prototipar tu aplicación Warp. Utilízalos primero en main.rs. Cuando quieras modularla, sepáralos en routes y handlers.
 
 <br />
 
